@@ -1,0 +1,193 @@
+{
+	"ForeingKey": {
+		"prefix": "foreing",
+		"body": [
+			"foreignId('$1')->nullable()->constrained('$2');$3"
+		],
+		"description": "Foreing Key"
+	},
+	
+	"php {}": {
+		"prefix": "{{",
+		"body": [
+			"{{ $1 }}"
+		],
+		"description": "php"
+	},
+	"post": {
+		"prefix": "post",
+		"body": [
+			"$$_POST['$1'];"
+		],
+		"description": "Die"
+	},
+	"var": {
+		"prefix": "var",
+		"body": [
+			"$$1;"
+		],
+		"description": "Die"
+	},
+	"Print Y": {
+		"prefix": "print_y",
+		"body": [
+			"die(print_y($$1));"
+		],
+		"description": "Php print_y"
+	},
+	"Die": {
+		"prefix": "die",
+		"body": [
+			"die('$1');$2",
+		],
+		"description": "Php print_y"
+	},
+	"echo": {
+		"prefix": "echo",
+		"body": [
+			"echo \"$1\";",
+		],
+		"description": "Php print_y"
+	},
+	"try": {
+		"prefix": "try.",
+		"body": [
+			"try{",
+			"	  $1",
+			"} catch (\\Illuminate\\Database\\QueryException $$ex) {",
+			"	return response()->json(['msg' => $$ex->getMessage()$2]);",
+			"}",
+		],
+		"description": "tryCatch Blade"
+	},
+	"update": {
+		"prefix": "update.",
+		"body": [
+			"DB::table('$1')",
+			"	 ->where('id', $$r->$2)",
+			"	 ->update([",
+			"	  	'$3' =>$4 ,",
+			"	  ]);",
+
+		],
+		"description": "Update Blade"
+	},
+	"query": {
+		"prefix": "query.",
+		"body": [
+			"DB::table('$1')->where('id', $$r->$2)->$get()"
+
+		],
+		"description": "Update Blade"
+	},
+	"insert": {
+		"prefix": "insert.",
+		"body": [
+			" DB::table('$1')->insert([",
+				"'$2' => $3,",
+			"]);"
+
+		],
+		"description": "Insery Blade"
+	},
+
+	
+	
+	
+		  
+		  
+	  
+
+
+
+
+
+	// For blade
+	"select": {
+		"prefix": "-select",
+		"body": [
+			"->select('$1')",
+		],
+		"description": "BLADE select"
+	},
+	"Request $r": {
+		"prefix": ".request $r",
+		"body": [
+			"Request $$r",
+		],
+		"description": "BLADE select"
+	},
+	"->with": {
+		"prefix": "-with",
+		"body": [
+			"->with('$1')",
+		],
+		"description": "BLADE select"
+	},
+	"where": {
+		"prefix": "->where",
+		"body": [
+			"->where('$1',$$2)",
+		],
+		"description": "BLADE Where"
+	},
+	"first": {
+		"prefix": "-first",
+		"body": [
+			"->first()",
+		],
+		"description": "BLADE first"
+	},
+	"get": {
+		"prefix": "-get()",
+		"body": [
+			"->get()",
+		],
+		"description": "BLADE first"
+	},
+	"leftjoin": {
+		"prefix": "-leftjoin",
+		"body": [
+			"->leftjoin(\"$1\", \"$2\", \"$3\")",
+		],
+		"description": "BLADE first"
+	},
+	"save();": {
+		"prefix": "-save();",
+		"body": [
+			"->save();",
+		],
+		"description": "BLADE first"
+	},
+	"$table->": {
+		"prefix": "table->",
+		"body": [
+			"$$table->$1",
+		],
+		"description": "BLADE first"
+	},
+	"Json": {
+		"prefix": "json",
+		"body": [
+			"return response()->json([",
+			"	'$1' => '$2'",
+			"]);"
+		],
+		"description": "BLADE first"
+	},
+	"$table": {
+		"prefix": "$table->",
+		"body": [
+			"$$table->"
+		],
+		"description": "BLADE first"
+	},
+	"useModel": {
+		"prefix": "usemodel.",
+		"body": [
+			"use App\\Models\\ $1;"
+		],
+		"description": "BLADE first"
+	},
+	
+}
