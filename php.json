@@ -1,11 +1,5 @@
 {
-	"ForeingKey": {
-		"prefix": "foreing",
-		"body": [
-			"foreignId('$1')->nullable()->constrained('$2');$3"
-		],
-		"description": "Foreing Key"
-	},
+	
 	
 	"php {}": {
 		"prefix": "{{",
@@ -159,13 +153,7 @@
 		],
 		"description": "BLADE first"
 	},
-	"$table->": {
-		"prefix": "table->",
-		"body": [
-			"$$table->$1",
-		],
-		"description": "BLADE first"
-	},
+	
 	"Json": {
 		"prefix": "json",
 		"body": [
@@ -189,5 +177,43 @@
 		],
 		"description": "BLADE first"
 	},
+
+    // Migrations
+    "$table->": {
+		"prefix": "table->",
+		"body": [
+			"$$table->$1",
+		],
+		"description": "BLADE first"
+	},
+    "String": {
+		"prefix": "string()",
+		"body": [
+			"string('$1')"
+		],
+		"description": "NelsonDJCR"
+	},
+    "integer": {
+		"prefix": "integer()",
+		"body": [
+			"integer('$1')"
+		],
+		"description": "NelsonDJCR"
+	},
+    "nullable": {
+		"prefix": "-nullable()",
+		"body": [
+			"->nullable()$1"
+		],
+		"description": "NelsonDJCR"
+	},
+    "ForeingKey": {
+		"prefix": "foreing",
+		"body": [
+			"foreignId('$1')->nullable()->constrained('$2');$3"
+		],
+		"description": "NelsonDJCR"
+	},
+
 	
 }
