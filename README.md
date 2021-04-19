@@ -1,6 +1,9 @@
 # snippets
 Snippes for VisualStudio Code
 
-use 
+Use
+--------------------------------
 windows + r
+--------------------------------
 %appdata%/code/User/snippets
+--------------------------------
