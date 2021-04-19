@@ -13,10 +13,24 @@
 	// 	"description": "Log output to console"
 	// }
 	"cor": {
-		"prefix": "llaves",
+		"prefix": "{{",
 		"body": [
 			"{{ $1 }}"
 		],
-		"description": "{}"
+		"description": "NelsonDJCR"
+	},
+	"assets": {
+		"prefix": ".asset",
+		"body": [
+			"{{ asset('$1') }}"
+		],
+		"description": "NelsonDJCR"
+	},
+	"url": {
+		"prefix": ".url",
+		"body": [
+			"{{ url('/$1') }}"
+		],
+		"description": "NelsonDJCR"
 	},
 }

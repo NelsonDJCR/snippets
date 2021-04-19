@@ -172,4 +172,68 @@
 		],
 		"description": ".css()"
 	},
+
+
+	// SweetAlert2
+
+	"SweetAlert": {
+		"prefix": "sw.success",
+		"body": [
+			"Swal.fire({"
+			"	icon: 'success',"
+			"	title: '$1',"
+			"	text: '$2',"
+			"});",
+		],
+		"description": "Success"
+	}
+	,
+	"SweetAlertw": {
+		"prefix": "sw.error",
+		"body": [
+			"Swal.fire({"
+			"	icon: 'error',"
+			"	title: 'Error$1',"
+			"	text: '$2',"
+			"});",
+		],
+		"description": "Error"
+	}
+	,
+	"RedirecSweet": {
+		"prefix": ".then",
+		"body": [
+			".then(function(){ window.location = '$1'; });",
+		],
+		"description": "Redict"
+	}
+	,
+	"Redirec": {
+		"prefix": "redirect",
+		"body": [
+			"window.location = '$1';",
+		],
+		"description": "Redict"
+	},
+	"Sw Question": {
+		"prefix": "sw.question",
+		"body": [
+			"Swal.fire({"
+			"	title: '¿$1?',"
+			"	text: \"$2\","
+			"	icon: 'warning',"
+			"	showCancelButton: true,"
+			"	confirmButtonColor: '#3085d6',"
+			"	cancelButtonColor: '#d33',"
+			"	confirmButtonText: '$3',"
+			"	confirmButtonText: '$4'"
+			"  }).then((result) => {"
+			"	if (result.isConfirmed) {"
+			"	  $4"
+			"	}"
+			"  })"
+		],
+		"description": "Question"
+	}
+
 }

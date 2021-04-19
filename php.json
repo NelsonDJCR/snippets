@@ -31,7 +31,7 @@
 	"Print Y": {
 		"prefix": "print_y",
 		"body": [
-			"die(print_y($$1));"
+			"echo '<pre>'; die(print_r($$1)); "
 		],
 		"description": "Php print_y"
 	},
