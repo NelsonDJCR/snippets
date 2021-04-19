@@ -1,4 +1,11 @@
 # snippets
 Snippes for VisualStudio Code
 
-use in C:\Users\dacko\AppData\Roaming\Code\User
+Use
+--------------------------------
+windows + r
+--------------------------------
+%appdata%/code/User/snippets
+--------------------------------
+git clone https://github.com/NelsonDJCR/snippets.git
+--------------------------------
