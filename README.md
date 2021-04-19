@@ -1,4 +1,6 @@
 # snippets
 Snippes for VisualStudio Code
 
-use in C:\Users\dacko\AppData\Roaming\Code\User
+use 
+windows + r
+%appdata%/code/User/snippets
