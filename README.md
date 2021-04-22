@@ -5,7 +5,7 @@ Use
 --------------------------------
 windows + r
 --------------------------------
-%appdata%/code/User/snippets
+%appdata%/code/User/
 --------------------------------
 git clone https://github.com/NelsonDJCR/snippets.git
 --------------------------------
