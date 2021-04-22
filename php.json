@@ -142,7 +142,7 @@
 	"leftjoin": {
 		"prefix": "-leftjoin",
 		"body": [
-			"->leftjoin(\"$1\", \"$2\", \"$3\")",
+			"->leftjoin(\"$1\", \"$1.$2\", \"$3\")",
 		],
 		"description": "BLADE first"
 	},
@@ -162,6 +162,15 @@
 			"]);"
 		],
 		"description": "BLADE first"
+	},
+	"ResponseJson": {
+		"prefix": "json-response",
+		"body": [
+			"return response()->json([",
+			"	request()->all()$1",
+			"]);"
+		],
+		"description": "NelsonDJCR"
 	},
 	"$table": {
 		"prefix": "$table->",
@@ -186,17 +195,10 @@
 		],
 		"description": "BLADE first"
 	},
-    "String": {
-		"prefix": "string()",
+    "ForeingKey": {
+		"prefix": "foreing",
 		"body": [
-			"string('$1')"
-		],
-		"description": "NelsonDJCR"
-	},
-    "integer": {
-		"prefix": "integer()",
-		"body": [
-			"integer('$1')"
+			"$$table->foreignId('$1')->nullable()->constrained('$2');$3"
 		],
 		"description": "NelsonDJCR"
 	},
@@ -207,13 +209,57 @@
 		],
 		"description": "NelsonDJCR"
 	},
-    "ForeingKey": {
-		"prefix": "foreing",
+    "after": {
+		"prefix": "-after()",
 		"body": [
-			"foreignId('$1')->nullable()->constrained('$2');$3"
+			"->after('$1')"
 		],
 		"description": "NelsonDJCR"
 	},
-
+    "default": {
+		"prefix": "-default()",
+		"body": [
+			"->default('$1')"
+		],
+		"description": "NelsonDJCR"
+	},
+    "String": {
+		"prefix": ".string()",
+		"body": [
+			"$$table->string('$1');"
+		],
+		"description": "NelsonDJCR"
+	},
+    "integer": {
+		"prefix": ".integer()",
+		"body": [
+			"$$table->integer('$1');"
+		],
+		"description": "NelsonDJCR"
+	},
+    "text": {
+		"prefix": ".text()",
+		"body": [
+			"$$table->text('$1');"
+		],
+		"description": "NelsonDJCR"
+	},
+    "drop": {
+		"prefix": ".drop()",
+		"body": [
+			"$$table->dropColumn('$1');"
+		],
+		"description": "NelsonDJCR"
+	},
+    
+    
+    "dropForeing": {
+		"prefix": ".dropForeing",
+		"body": [
+			"$$table->dropForeign(['$1']);",
+			"$$table->dropColumn('$1');"
+		],
+		"description": "NelsonDJCR"
+	},
 	
 }
