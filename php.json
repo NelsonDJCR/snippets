@@ -1,10 +1,48 @@
 {
+	"useController": {
+		"prefix": "use.controller",
+		"body": [
+			"use App\\Http\\Controllers\\ $1;"
+		],
+		"description": "NelsonDJCR"
+	},
+	"useModel": {
+		"prefix": "use.model",
+		"body": [
+			"use App\\Models\\ $1;"
+		],
+		"description": "BLADE first"
+	},
+	
+	"Web": {
+		"prefix": "route.get",
+		"body": [
+			"Route::get('/$route', [$Controller::class,'$function']);"
+		],
+		"description": "NelsonDJCR"
+	},
+	"web-post": {
+		"prefix": "route.post",
+		"body": [
+			"Route::post('/$route', [$Controller::class,'$function']);"
+		],
+		"description": "NelsonDJCR"
+	},
+
+
+
+
+
+
+
+
+
 	"ForeingKey": {
-		"prefix": "foreing",
+		"prefix": ".foreing",
 		"body": [
 			"foreignId('$1')->nullable()->constrained('$2');$3"
 		],
-		"description": "Foreing Key"
+		"description": "NelsonDJCR"
 	},
 	
 	"php {}": {
@@ -12,28 +50,28 @@
 		"body": [
 			"{{ $1 }}"
 		],
-		"description": "php"
+		"description": "NelsonDJCR"
 	},
 	"post": {
 		"prefix": "post",
 		"body": [
 			"$$_POST['$1'];"
 		],
-		"description": "Die"
+		"description": "NelsonDJCR"
 	},
 	"var": {
 		"prefix": "var",
 		"body": [
 			"$$1;"
 		],
-		"description": "Die"
+		"description": "NelsonDJCR"
 	},
 	"Print Y": {
 		"prefix": "print_y",
 		"body": [
 			"echo '<pre>'; die(print_r($$1)); "
 		],
-		"description": "Php print_y"
+		"description": "NelsonDJCR"
 	},
 	"Die": {
 		"prefix": "die",
@@ -182,12 +220,6 @@
 		],
 		"description": "BLADE first"
 	},
-	"useModel": {
-		"prefix": "usemodel.",
-		"body": [
-			"use App\\Models\\ $1;"
-		],
-		"description": "BLADE first"
-	},
+	
 	
 }
