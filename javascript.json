@@ -107,9 +107,9 @@
 		"description": "$.post"
 	},
 	"attr": {
-		"prefix": "attr",
+		"prefix": ".attr",
 		"body": [
-			"$(this)",
+			".attr('$1','$2')",
 		],
 		"description": "$.post"
 	},

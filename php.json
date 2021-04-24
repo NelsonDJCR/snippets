@@ -186,7 +186,7 @@
 	"leftjoin": {
 		"prefix": "-leftjoin",
 		"body": [
-			"->leftjoin(\"$1\", \"$2\", \"$3\")",
+			"->leftjoin(\"$1\", \"$1.$2\", \"$3\")",
 		],
 		"description": "BLADE first"
 	},
@@ -197,13 +197,7 @@
 		],
 		"description": "BLADE first"
 	},
-	"$table->": {
-		"prefix": "table->",
-		"body": [
-			"$$table->$1",
-		],
-		"description": "BLADE first"
-	},
+	
 	"Json": {
 		"prefix": "json",
 		"body": [
@@ -213,6 +207,15 @@
 		],
 		"description": "BLADE first"
 	},
+	"ResponseJson": {
+		"prefix": "json-response",
+		"body": [
+			"return response()->json([",
+			"	request()->all()$1",
+			"]);"
+		],
+		"description": "NelsonDJCR"
+	},
 	"$table": {
 		"prefix": "$table->",
 		"body": [
@@ -220,6 +223,87 @@
 		],
 		"description": "BLADE first"
 	},
-	
+	"useModel": {
+		"prefix": "usemodel.",
+		"body": [
+			"use App\\Models\\ $1;"
+		],
+		"description": "BLADE first"
+	},
+
+    // Migrations
+    "$table->": {
+		"prefix": "table->",
+		"body": [
+			"$$table->$1",
+		],
+		"description": "BLADE first"
+	},
+    "ForeingKey": {
+		"prefix": "foreing",
+		"body": [
+			"$$table->foreignId('$1')->nullable()->constrained('$2');$3"
+		],
+		"description": "NelsonDJCR"
+	},
+    "nullable": {
+		"prefix": "-nullable()",
+		"body": [
+			"->nullable()$1"
+		],
+		"description": "NelsonDJCR"
+	},
+    "after": {
+		"prefix": "-after()",
+		"body": [
+			"->after('$1')"
+		],
+		"description": "NelsonDJCR"
+	},
+    "default": {
+		"prefix": "-default()",
+		"body": [
+			"->default('$1')"
+		],
+		"description": "NelsonDJCR"
+	},
+    "String": {
+		"prefix": ".string()",
+		"body": [
+			"$$table->string('$1');"
+		],
+		"description": "NelsonDJCR"
+	},
+    "integer": {
+		"prefix": ".integer()",
+		"body": [
+			"$$table->integer('$1');"
+		],
+		"description": "NelsonDJCR"
+	},
+    "text": {
+		"prefix": ".text()",
+		"body": [
+			"$$table->text('$1');"
+		],
+		"description": "NelsonDJCR"
+	},
+    "drop": {
+		"prefix": ".drop()",
+		"body": [
+			"$$table->dropColumn('$1');"
+		],
+		"description": "NelsonDJCR"
+	},
+    
+    
+    "dropForeing": {
+		"prefix": ".dropForeing",
+		"body": [
+			"$$table->dropForeign(['$1']);",
+			"$$table->dropColumn('$1');"
+		],
+		"description": "NelsonDJCR"
+	},
 	
 }
