@@ -6,14 +6,6 @@
 		],
 		"description": "NelsonDJCR"
 	},
-	"useModel": {
-		"prefix": "use.model",
-		"body": [
-			"use App\\Models\\ $1;"
-		],
-		"description": "BLADE first"
-	},
-	
 	"Web": {
 		"prefix": "route.get",
 		"body": [
@@ -27,24 +19,7 @@
 			"Route::post('/$route', [$Controller::class,'$function']);"
 		],
 		"description": "NelsonDJCR"
-	},
-
-
-
-
-
-
-
-
-
-	"ForeingKey": {
-		"prefix": ".foreing",
-		"body": [
-			"foreignId('$1')->nullable()->constrained('$2');$3"
-		],
-		"description": "NelsonDJCR"
-	},
-	
+	},	
 	"php {}": {
 		"prefix": "{{",
 		"body": [
@@ -78,14 +53,14 @@
 		"body": [
 			"die('$1');$2",
 		],
-		"description": "Php print_y"
+		"description": "NelsonDJCR"
 	},
 	"echo": {
 		"prefix": "echo",
 		"body": [
 			"echo \"$1\";",
 		],
-		"description": "Php print_y"
+		"description": "NelsonDJCR"
 	},
 	"try": {
 		"prefix": "try.",
@@ -96,7 +71,7 @@
 			"	return response()->json(['msg' => $$ex->getMessage()$2]);",
 			"}",
 		],
-		"description": "tryCatch Blade"
+		"description": "NelsonDJCR"
 	},
 	"update": {
 		"prefix": "update.",
@@ -108,15 +83,14 @@
 			"	  ]);",
 
 		],
-		"description": "Update Blade"
+		"description": "NelsonDJCR"
 	},
 	"query": {
 		"prefix": "query.",
 		"body": [
 			"DB::table('$1')->where('id', $$r->$2)->$get()"
-
 		],
-		"description": "Update Blade"
+		"description": "NelsonDJCR"
 	},
 	"insert": {
 		"prefix": "insert.",
@@ -124,48 +98,42 @@
 			" DB::table('$1')->insert([",
 				"'$2' => $3,",
 			"]);"
-
 		],
-		"description": "Insery Blade"
+		"description": "NelsonDJCR"
 	},
-
-	
-	
-	
-		  
-		  
-	  
-
-
-
-
-
-	// For blade
+	//**** For blade ****//
 	"select": {
 		"prefix": "-select",
 		"body": [
-			"->select('$1')",
+			"->select('$1')$2",
 		],
-		"description": "BLADE select"
+		"description": "NelsonDJCR"
+	},
+	"take": {
+		"prefix": "-take",
+		"body": [
+			"->take($1)$2",
+		],
+		"description": "NelsonDJCR"
 	},
 	"Request $r": {
 		"prefix": ".request $r",
 		"body": [
 			"Request $$r",
 		],
-		"description": "BLADE select"
+		"description": "NelsonDJCR"
 	},
 	"->with": {
 		"prefix": "-with",
 		"body": [
-			"->with('$1')",
+			"->with('$1')$2",
 		],
-		"description": "BLADE select"
+		"description": "NelsonDJCR"
 	},
 	"where": {
 		"prefix": "->where",
 		"body": [
-			"->where('$1',$$2)",
+			"->where('$1',$2)$3",
 		],
 		"description": "BLADE Where"
 	},
@@ -174,28 +142,28 @@
 		"body": [
 			"->first()",
 		],
-		"description": "BLADE first"
+		"description": "NelsonDJCR"
 	},
 	"get": {
 		"prefix": "-get()",
 		"body": [
 			"->get()",
 		],
-		"description": "BLADE first"
+		"description": "NelsonDJCR"
 	},
 	"leftjoin": {
 		"prefix": "-leftjoin",
 		"body": [
-			"->leftjoin(\"$1\", \"$1.$2\", \"$3\")",
+			"->leftjoin(\"$1\", \"$1.$2\", \"$3\")$4",
 		],
-		"description": "BLADE first"
+		"description": "NelsonDJCR"
 	},
 	"save();": {
 		"prefix": "-save();",
 		"body": [
 			"->save();",
 		],
-		"description": "BLADE first"
+		"description": "NelsonDJCR"
 	},
 	
 	"Json": {
@@ -205,7 +173,7 @@
 			"	'$1' => '$2'",
 			"]);"
 		],
-		"description": "BLADE first"
+		"description": "NelsonDJCR"
 	},
 	"ResponseJson": {
 		"prefix": "json-response",
@@ -219,16 +187,16 @@
 	"$table": {
 		"prefix": "$table->",
 		"body": [
-			"$$table->"
+			"$$table->$1"
 		],
-		"description": "BLADE first"
+		"description": "NelsonDJCR"
 	},
 	"useModel": {
-		"prefix": "usemodel.",
+		"prefix": "use.model",
 		"body": [
 			"use App\\Models\\ $1;"
 		],
-		"description": "BLADE first"
+		"description": "NelsonDJCR"
 	},
 
     // Migrations
@@ -237,10 +205,10 @@
 		"body": [
 			"$$table->$1",
 		],
-		"description": "BLADE first"
+		"description": "NelsonDJCR"
 	},
     "ForeingKey": {
-		"prefix": "foreing",
+		"prefix": "-foreing",
 		"body": [
 			"$$table->foreignId('$1')->nullable()->constrained('$2');$3"
 		],
@@ -263,42 +231,42 @@
     "default": {
 		"prefix": "-default()",
 		"body": [
-			"->default('$1')"
+			"->default('$1')$2"
 		],
 		"description": "NelsonDJCR"
 	},
     "String": {
-		"prefix": ".string()",
+		"prefix": "-string()",
 		"body": [
-			"$$table->string('$1');"
+			"$$table->string('$1')$2;$3"
 		],
 		"description": "NelsonDJCR"
 	},
     "integer": {
-		"prefix": ".integer()",
+		"prefix": "-integer()",
 		"body": [
-			"$$table->integer('$1');"
+			"$$table->integer('$1')$2;$3"
 		],
 		"description": "NelsonDJCR"
 	},
     "text": {
-		"prefix": ".text()",
+		"prefix": "-text()",
 		"body": [
-			"$$table->text('$1');"
+			"$$table->text('$1')$2;$3"
 		],
 		"description": "NelsonDJCR"
 	},
     "drop": {
-		"prefix": ".drop()",
+		"prefix": "-drop()",
 		"body": [
-			"$$table->dropColumn('$1');"
+			"$$table->dropColumn('$1')$2;$3"
 		],
 		"description": "NelsonDJCR"
 	},
     
     
     "dropForeing": {
-		"prefix": ".dropForeing",
+		"prefix": "-dropForeing",
 		"body": [
 			"$$table->dropForeign(['$1']);",
 			"$$table->dropColumn('$1');"
