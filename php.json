@@ -62,6 +62,13 @@
 		],
 		"description": "NelsonDJCR"
 	},
+	"protected": {
+		"prefix": "-protected",
+		"body": [
+			"protected $$table = '$1';",
+		],
+		"description": "NelsonDJCR"
+	},
 	"try": {
 		"prefix": "try.",
 		"body": [
@@ -273,5 +280,44 @@
 		],
 		"description": "NelsonDJCR"
 	},
+	
+	
+	
+	// **** VALIDATOR FORM REQUEST  **** //
+    "Create Validato": {
+		"prefix": "-v.create",
+		"body": [
+			"$$rules = ["
+			"	"
+			"];"
+			"$$messages = ["
+			"	"
+			"];"
+		],
+		"description": "NelsonDJCR"
+	},
+	"V required": {
+		"prefix": "-v.rule",
+		"body": [
+			"'$1' => 'required|numeric$2',$3"
+		],
+		"description": "NelsonDJCR"
+	},
+    "V numeric": {
+		"prefix": "-v.r.numeric",
+		"body": [
+			"'$1' => 'required|numeric'$2,"
+		],
+		"description": "NelsonDJCR"
+	},
+	// **** VALIDATOR MESAGGES  **** //
+    "V msg": {
+		"prefix": "-v.m.required",
+		"body": [
+			"'$1.required' => 'El $2 es requerido',$3"
+		],
+		"description": "NelsonDJCR"
+	},
+   
 	
 }
