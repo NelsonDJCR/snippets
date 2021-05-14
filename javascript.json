@@ -5,7 +5,7 @@
 	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the 
 	// same ids are connected.
 	// Example:
-	// "Print to console": {
+	// "Print to console 💻": {
 	// 	"prefix": "log",
 	// 	"body": [
 	// 		"console.log('$1');",
@@ -13,7 +13,7 @@
 	// 	],
 	// 	"description": "Log output to console"
 	// }
-	"Ajax": {
+	"Ajax 💻": {
 		"prefix": "ajax",
 		"body": [
 			"$.ajax({",
@@ -36,64 +36,73 @@
 		],
 		"description": "Log output to console"
 	},
-	"Create id": {
+	"Create id 💻": {
 		"prefix": "id",
 		"body": [
 			"$(\"#$1\")$2",
 		],
 		"description": "Log output to console"
 	},
-	"Create click funtion": {
+	"Create click funtion 💻": {
 		"prefix": ".click",
 		"body": [
 			".click(function() {$2});",
 		],
-		"description": "NelsonDJCR"
+		"description": "NelsonDJCR 🌌"
 	},
-	"Create alert": {
+	"Document Ready 💻": {
+		"prefix": "docReady",
+		"body": [
+			"$(document).ready(function() {",
+			"   $1",
+			"});"
+		],
+		"description": "NelsonDJCR 🌌"
+	},
+	"Create alert 💻": {
 		"prefix": "alert",
 		"body": [
 			"alert(\"$1\");",
 			"return false;",
 		],
-		"description": "NelsonDJCR"
+		"description": "NelsonDJCR 🌌"
 	},
-	"val": {
+	"val 💻": {
 		"prefix": ".val",
 		"body": [
 			".val($1)",
 		],
-		"description": "NelsonDJCR"
+		"description": "NelsonDJCR 🌌"
 	},
-	"this": {
+	"this 💻": {
 		"prefix": "this",
 		"body": [
 			"$(this)$1",
 		],
-		"description": "NelsonDJCR"
+		"description": "NelsonDJCR 🌌"
 	},
-	".data": {
+	".data 💻": {
 		"prefix": ".data",
 		"body": [
 			".data('$1')",
 		],
-		"description": "NelsonDJCR"
+		"description": "NelsonDJCR 🌌"
 	},
-	"base64": {
+	"base64 💻": {
 		"prefix": "base64",
 		"body": [
 			"btoa('$1');",
 		],
-		"description": "NelsonDJCR"
+		"description": "NelsonDJCR 🌌"
 	},
-	"return": {
+	"return 💻": {
 		"prefix": "return",
 		"body": [
 			"return false;$1",
 		],
-		"description": "NelsonDJCR"
+		"description": "NelsonDJCR 🌌"
 	},
-	"post": {
+	"post 💻": {
 		"prefix": "post",
 		"body": [
 			"$.post('$1',",
@@ -106,21 +115,21 @@
 		],
 		"description": "$.post"
 	},
-	"attr": {
+	"attr 💻": {
 		"prefix": ".attr",
 		"body": [
 			".attr('$1','$2')",
 		],
 		"description": "$.post"
 	},
-	"csrf": {
+	"csrf 💻": {
 		"prefix": "csrf",
 		"body": [
 			"_token: \"{{ csrf_token() }}\"",
 		],
 		"description": "BLADE first"
 	},
-	"console": {
+	"console 💻": {
 		"prefix": "console",
 		"body": [
 			"console.log('$1');",
@@ -128,68 +137,84 @@
 		],
 		"description": "BLADE first"
 	},
-	"jsid": {
+	"jsid 💻": {
 		"prefix": "docid",
 		"body": [
 			"document.getElementById('$1');",
 		],
 		"description": "BLADE first"
 	},
-	"jsquery": {
+	"jsquery 💻": {
 		"prefix": "docquery",
 		"body": [
 			"document.querySelector('$1');",
 		],
 		"description": "BLADE first"
 	},
-	"serialize": {
+	"serialize 💻": {
 		"prefix": ".serialize()",
 		"body": [
 			".serialize()",
 		],
 		"description": ".serialize()"
 	},
-	"css": {
-		"prefix": ".css()",
+	"css 💻": {
+		"prefix": "NelsonDJCR 🐉",
 		"body": [
 			".css('$1','$2')",
 		],
-		"description": ".css()"
+		"description": "NelsonDJCR 🐉"
 	},
-	"body": {
+	"body 💻": {
 		"prefix": "body.",
 		"body": [
 			"$('body').on('click', '.$1', function() {",
 			"	$2",
 			"});",
 		],
-		"description": ".css()"
+		"description": "NelsonDJCR 🐉"
 	},
-	"location": {
+	"location 💻": {
 		"prefix": "location.",
 		"body": [
 			"window.location.href = '$1'"
 		],
-		"description": ".css()"
+		"description": "NelsonDJCR 🐉"
+	},
+
+	// Vue
+	"Axios 💻": {
+		"prefix": "v.axios 🐉",
+		"body": [
+			"axios.post('/$1', this.$2).then((r) => {",
+			"	$3",
+			"});"
+		],
+		"description": "NelsonDJCR 🐉"
+	},
+	"Function 💻": {
+		"prefix": "v.fun 🌌",
+		"body": [
+			"$1($id){",
+			"	$3",
+			"},"
+		],
+		"description": "NelsonDJCR 🐉"
 	},
 
 
 	// SweetAlert2
 
-	"SweetAlert": {
-		"prefix": "sw.success",
+	"SweetAlert 💻": {
+		"prefix": "sw.success 🐖",
 		"body": [
-			"Swal.fire({"
-			"	icon: 'success',"
-			"	title: '$1',"
-			"	text: '$2',"
-			"});",
+			"Swal.fire('¡Perfecto!','Datos eliminados correctamente','success')"
 		],
-		"description": "Success"
+		"description": "NelsonDJCR 🌌"
 	}
 	,
-	"SweetAlertw": {
-		"prefix": "sw.error",
+	"SweetAlertw 💻": {
+		"prefix": "sw.error 🐖",
 		"body": [
 			"Swal.fire({"
 			"	icon: 'error',"
@@ -197,43 +222,44 @@
 			"	text: '$2',"
 			"});",
 		],
-		"description": "Error"
+		"description": "NelsonDJCR 🌌"
 	}
 	,
-	"RedirecSweet": {
-		"prefix": ".then",
+	"RedirecSweet 💻": {
+		"prefix": ".then 🐖",
 		"body": [
 			".then(function(){ window.location = '$1'; });",
 		],
 		"description": "Redict"
 	}
 	,
-	"Redirec": {
+	"Redirec 💻": {
 		"prefix": "redirect",
 		"body": [
 			"window.location = '$1';",
 		],
 		"description": "Redict"
 	},
-	"Sw Question": {
-		"prefix": "sw.question",
+	"Sw Question 💻": {
+		"prefix": "sw.question 🐖",
 		"body": [
-			"Swal.fire({"
-			"	title: '¿$1?',"
-			"	text: \"$2\","
-			"	icon: 'warning',"
-			"	showCancelButton: true,"
-			"	confirmButtonColor: '#3085d6',"
-			"	cancelButtonColor: '#d33',"
-			"	confirmButtonText: '$3',"
-			"	confirmButtonText: '$4'"
-			"  }).then((result) => {"
-			"	if (result.isConfirmed) {"
-			"	  $4"
-			"	}"
-			"  })"
+			"Swal.fire({",
+				"title: '¿Eliminar registro?',",
+				"text: 'Esta acción no se puede revertir',",
+				"icon: 'question',",
+				"showCancelButton: true,",
+				"confirmButtonColor: '#3085d6',",
+				"cancelButtonColor: '#757575',",
+				"confirmButtonText: 'Aceptar',",
+				"cancelButtonText: 'Cancelar'",
+			  "}).then((result) => {",
+				"if (result.value) {",
+				  "Swal.fire('Eliminado!', 'Registro eliminado correctamente.', 'success');",
+				"}",
+			  "});"
 		],
 		"description": "Question"
 	}
+	
 
 }
