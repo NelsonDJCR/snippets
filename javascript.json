@@ -14,7 +14,7 @@
 	// 	"description": "Log output to console"
 	// }
 	"Ajax 💻": {
-		"prefix": "ajax",
+		"prefix": "ajax 🌌",
 		"body": [
 			"$.ajax({",
 			"	type: \"POST\",",
@@ -36,28 +36,35 @@
 			"return false;",
 			"$2",
 		],
-		"description": "Log output to console"
+		"description": "NelsonDJCR 🐉"
 	},
 	"Create id 💻": {
-		"prefix": "id",
+		"prefix": "id 🌌",
 		"body": [
 			"$(\"#$1\")$2",
 		],
-		"description": "Log output to console"
+		"description": "NelsonDJCR 🐉"
+	},
+	"trigger 💻": {
+		"prefix": ".trigger 🌌",
+		"body": [
+			".trigger('$click');",
+		],
+		"description": "NelsonDJCR 🐉"
 	},
 	"Form Data": {
-		"prefix": "formData",
+		"prefix": "formData 🌌",
 		"body": [
 			"var form = new FormData($('#$1')[0])$2",
 		],
-		"description": "Log output to console"
+		"description": "NelsonDJCR 🐉"
 	},
 	"Create click funtion": {
-		"prefix": ".click",
+		"prefix": ".click 🌌",
 		"body": [
 			".click(function() {$2});",
 		],
-		"description": "NelsonDJCR 🌌"
+		"description": "NelsonDJCR 🐉"
 	},
 	"Document Ready 💻": {
 		"prefix": "docReady",
@@ -66,53 +73,53 @@
 			"   $1",
 			"});"
 		],
-		"description": "NelsonDJCR 🌌"
+		"description": "NelsonDJCR 🐉"
 	},
 	"Create alert 💻": {
-		"prefix": "alert",
+		"prefix": "alert 🌌",
 		"body": [
 			"alert(\"$1\");",
 			"return false;",
 		],
-		"description": "NelsonDJCR 🌌"
+		"description": "NelsonDJCR 🐉"
 	},
 	"val 💻": {
-		"prefix": ".val",
+		"prefix": ".val 🌌",
 		"body": [
 			".val($1)",
 		],
-		"description": "NelsonDJCR 🌌"
+		"description": "NelsonDJCR 🐉"
 	},
 	"this 💻": {
 		"prefix": "this",
 		"body": [
 			"$(this)$1",
 		],
-		"description": "NelsonDJCR 🌌"
+		"description": "NelsonDJCR 🐉"
 	},
 	".data 💻": {
-		"prefix": ".data",
+		"prefix": ".data 🌌",
 		"body": [
 			".data('$1')",
 		],
-		"description": "NelsonDJCR 🌌"
+		"description": "NelsonDJCR 🐉"
 	},
 	"base64 💻": {
-		"prefix": "base64",
+		"prefix": "base64 🌌",
 		"body": [
 			"btoa('$1');",
 		],
-		"description": "NelsonDJCR 🌌"
+		"description": "NelsonDJCR 🐉"
 	},
 	"return 💻": {
-		"prefix": "return",
+		"prefix": "return 🌌",
 		"body": [
 			"return false;$1",
 		],
-		"description": "NelsonDJCR 🌌"
+		"description": "NelsonDJCR 🐉"
 	},
 	"post 💻": {
-		"prefix": "post",
+		"prefix": "post 🌌",
 		"body": [
 			"$.post('$1',",
 			"{",
@@ -125,47 +132,47 @@
 		"description": "$.post"
 	},
 	"attr 💻": {
-		"prefix": ".attr",
+		"prefix": ".attr 🌌",
 		"body": [
 			".attr('$1','$2')",
 		],
-		"description": "$.post"
+		"description": "NelsonDJCR 🐉"
 	},
 	"csrf 💻": {
-		"prefix": "csrf",
+		"prefix": "csrf 🌌",
 		"body": [
 			"_token: \"{{ csrf_token() }}\"",
 		],
-		"description": "BLADE first"
+		"description": "NelsonDJCR 🐉"
 	},
 	"console 💻": {
-		"prefix": "console",
+		"prefix": "console 🌌",
 		"body": [
 			"console.log('$1');",
 			"return false;",
 		],
-		"description": "BLADE first"
+		"description": "NelsonDJCR 🐉"
 	},
 	"jsid 💻": {
-		"prefix": "docid",
+		"prefix": "docid 🌌",
 		"body": [
 			"document.getElementById('$1');",
 		],
-		"description": "BLADE first"
+		"description": "NelsonDJCR 🐉"
 	},
 	"jsquery 💻": {
-		"prefix": "docquery",
+		"prefix": "docquery"  ,
 		"body": [
 			"document.querySelector('$1');",
 		],
-		"description": "BLADE first"
+		"description": "NelsonDJCR 🐉"
 	},
 	"serialize 💻": {
 		"prefix": ".serialize()",
 		"body": [
 			".serialize()",
 		],
-		"description": ".serialize()"
+		"description": "NelsonDJCR 🐉"
 	},
 	"css 💻": {
 		"prefix": "NelsonDJCR 🐉",
@@ -210,7 +217,13 @@
 		],
 		"description": "NelsonDJCR 🐉"
 	},
-
+	"": {
+		"prefix": "",
+		"body": [
+			""
+		],
+		"description": "NelsonDJCR 🐉"
+	},
 
 	// SweetAlert2
 
@@ -219,7 +232,7 @@
 		"body": [
 			"Swal.fire('¡$1!','$2','success' )"
 		],
-		"description": "NelsonDJCR 🌌"
+		"description": "NelsonDJCR 🐉"
 	}
 	,
 	"SweetAlertw 💻": {
@@ -227,7 +240,7 @@
 		"body": [
 			"Swal.fire('¡$1!','$2','error' )"
 		],
-		"description": "NelsonDJCR 🌌"
+		"description": "NelsonDJCR 🐉"
 	}
 	,
 	"RedirecSweet 💻": {
@@ -235,7 +248,7 @@
 		"body": [
 			".then(function(){ window.location = '$1'; });",
 		],
-		"description": "Redict"
+		"description": "NelsonDJCR 🐉"
 	}
 	,
 	"Redirec 💻": {
@@ -243,7 +256,7 @@
 		"body": [
 			"window.location = '$1';",
 		],
-		"description": "Redict"
+		"description": "NelsonDJCR 🐉"
 	},
 	"Sw Question 💻": {
 		"prefix": "sw.question 🐖",
@@ -263,7 +276,7 @@
 				"}",
 			  "});"
 		],
-		"description": "Question"
+		"description": "NelsonDJCR 🐉"
 	}
 	
 
