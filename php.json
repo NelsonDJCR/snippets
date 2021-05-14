@@ -13,6 +13,13 @@
 		],
 		"description": "NelsonDJCR"
 	},
+	"getNmaeImage": {
+		"prefix": "-getName",
+		"body": [
+			"->getClientOriginalName();$1"
+		],
+		"description": "NelsonDJCR"
+	},
 	"Web": {
 		"prefix": "route.get",
 		"body": [
@@ -140,7 +147,7 @@
 	"->with": {
 		"prefix": "-with",
 		"body": [
-			"->with('$1')$2",
+			"->with(['$1'=>$2])$3",
 		],
 		"description": "NelsonDJCR"
 	},
@@ -168,7 +175,7 @@
 	"leftjoin": {
 		"prefix": "-leftjoin",
 		"body": [
-			"->leftjoin(\"$1\", \"$1.$2\", \"$3\")$4",
+			"->leftjoin(\"$1\", \"$1.id\", \"$3.$4\")$5",
 		],
 		"description": "NelsonDJCR"
 	},
@@ -184,7 +191,8 @@
 		"prefix": "ret.json",
 		"body": [
 			"return response()->json([",
-			"	'$1' => '$2'",
+			"	'$1code' =>$2 200,",
+			"	'$3msg' => '$4',",
 			"]);"
 		],
 		"description": "NelsonDJCR"

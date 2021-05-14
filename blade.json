@@ -31,5 +31,26 @@
 		],
 		"description": "NelsonDJCR"
 	},
+	"Storage": {
+		"prefix": ".storage",
+		"body": [
+			"{{ asset(\"storage\").\"/\".$route }}"
+		],
+		"description": "NelsonDJCR"
+	},
+	"Record foreach": {
+		"prefix": "-id",
+		"body": [
+			"{{ $$i->$1 }}$2"
+		],
+		"description": "NelsonDJCR"
+	},
+	"Record regsiter": {
+		"prefix": "-data",
+		"body": [
+			"{{ $$data->$1 }}$2"
+		],
+		"description": "NelsonDJCR"
+	},
 
 }

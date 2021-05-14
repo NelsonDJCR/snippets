@@ -18,8 +18,10 @@
 		"body": [
 			"$.ajax({",
 			"	type: \"POST\",",
-			"	url: $1,",
+			"	url: '$1',",
 			"	data: $2,",
+			"	headers: {'X-CSRF-TOKEN': $('meta[name='csrf-token']').attr('content')},",
+			"	contentType: false,",
 			"	success: function (r) {",
 			"	  if (r == 1) {",
 			"		$3",
@@ -43,7 +45,14 @@
 		],
 		"description": "Log output to console"
 	},
-	"Create click funtion 💻": {
+	"Form Data": {
+		"prefix": "formData",
+		"body": [
+			"var form = new FormData($('#$1')[0])$2",
+		],
+		"description": "Log output to console"
+	},
+	"Create click funtion": {
 		"prefix": ".click",
 		"body": [
 			".click(function() {$2});",
@@ -208,7 +217,7 @@
 	"SweetAlert 💻": {
 		"prefix": "sw.success 🐖",
 		"body": [
-			"Swal.fire('¡Perfecto!','Datos eliminados correctamente','success')"
+			"Swal.fire('¡$1!','$2','success' )"
 		],
 		"description": "NelsonDJCR 🌌"
 	}
@@ -216,11 +225,7 @@
 	"SweetAlertw 💻": {
 		"prefix": "sw.error 🐖",
 		"body": [
-			"Swal.fire({"
-			"	icon: 'error',"
-			"	title: 'Error$1',"
-			"	text: '$2',"
-			"});",
+			"Swal.fire('¡$1!','$2','error' )"
 		],
 		"description": "NelsonDJCR 🌌"
 	}
