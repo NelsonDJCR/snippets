@@ -222,7 +222,7 @@
 	// SweetAlert2
 
 	"SweetAlert 💻": {
-		"prefix": "sw.success 🐖",
+		"prefix": "sw.success 🌌",
 		"body": [
 			"Swal.fire('¡$1!','$2','success' )"
 		],
@@ -230,7 +230,7 @@
 	}
 	,
 	"SweetAlertw 💻": {
-		"prefix": "sw.error 🐖",
+		"prefix": "sw.error 🌌",
 		"body": [
 			"Swal.fire('¡$1!','$2','error' )"
 		],
@@ -238,7 +238,7 @@
 	}
 	,
 	"RedirecSweet 💻": {
-		"prefix": ".then 🐖",
+		"prefix": ".then 🌌",
 		"body": [
 			".then(function(){ window.location = '$1'; });",
 		],
@@ -253,7 +253,7 @@
 		"description": "NelsonDJCR 🐉"
 	},
 	"Sw Question 💻": {
-		"prefix": "sw.question 🐖",
+		"prefix": "sw.question 🌌",
 		"body": [
 			"Swal.fire({",
 				"title: '¿Eliminar registro?',",
