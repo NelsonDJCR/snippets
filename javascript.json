@@ -67,7 +67,7 @@
 		"description": "NelsonDJCR 🐉"
 	},
 	"Document Ready 💻": {
-		"prefix": "docReady",
+		"prefix": "docReady 🌌",
 		"body": [
 			"$(document).ready(function() {",
 			"   $1",
@@ -91,7 +91,7 @@
 		"description": "NelsonDJCR 🐉"
 	},
 	"this 💻": {
-		"prefix": "this",
+		"prefix": "this 🌌",
 		"body": [
 			"$(this)$1",
 		],
@@ -161,28 +161,28 @@
 		"description": "NelsonDJCR 🐉"
 	},
 	"jsquery 💻": {
-		"prefix": "docquery"  ,
+		"prefix": "docquery 🌌"  ,
 		"body": [
 			"document.querySelector('$1');",
 		],
 		"description": "NelsonDJCR 🐉"
 	},
 	"serialize 💻": {
-		"prefix": ".serialize()",
+		"prefix": ".serialize() 🌌",
 		"body": [
 			".serialize()",
 		],
 		"description": "NelsonDJCR 🐉"
 	},
 	"css 💻": {
-		"prefix": "NelsonDJCR 🐉",
+		"prefix": ".css() 🌌",
 		"body": [
 			".css('$1','$2')",
 		],
 		"description": "NelsonDJCR 🐉"
 	},
 	"body 💻": {
-		"prefix": "body.",
+		"prefix": ".body 🌌",
 		"body": [
 			"$('body').on('click', '.$1', function() {",
 			"	$2",
@@ -191,7 +191,7 @@
 		"description": "NelsonDJCR 🐉"
 	},
 	"location 💻": {
-		"prefix": "location.",
+		"prefix": "location. 🌌",
 		"body": [
 			"window.location.href = '$1'"
 		],
@@ -200,7 +200,7 @@
 
 	// Vue
 	"Axios 💻": {
-		"prefix": "v.axios 🐉",
+		"prefix": "v.axios 🌌",
 		"body": [
 			"axios.post('/$1', this.$2).then((r) => {",
 			"	$3",
@@ -217,13 +217,7 @@
 		],
 		"description": "NelsonDJCR 🐉"
 	},
-	"": {
-		"prefix": "",
-		"body": [
-			""
-		],
-		"description": "NelsonDJCR 🐉"
-	},
+	
 
 	// SweetAlert2
 
