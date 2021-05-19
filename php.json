@@ -38,6 +38,13 @@
 		],
 		"description": "NelsonDJCR"
 	},
+	"strtoupper($str)": {
+		"prefix": "str.upper",
+		"body": [
+			"strtoupper($1)$2"
+		],
+		"description": "NelsonDJCR"
+	},
 	"getNmaeImage": {
 		"prefix": "-getName",
 		"body": [
@@ -225,7 +232,7 @@
 		"description": "NelsonDJCR"
 	},
 	"Json": {
-		"prefix": "json-code",
+		"prefix": "ret.json",
 		"body": [
 			"return response()->json([",
 			"	'code' =>$1 200,",
@@ -242,10 +249,18 @@
 		"description": "NelsonDJCR"
 	},
 	"ResponseJson": {
-		"prefix": "json-response",
+		"prefix": "ret.all",
+		"body": [
+			"return request()->all();$1",
+		],
+		"description": "NelsonDJCR"
+	},
+	"return Status": {
+		"prefix": "ret.status",
 		"body": [
 			"return response()->json([",
-			"	request()->all()$1",
+			"	'code' =>'$1 200'",
+			"	'msg' => '$2'",
 			"]);"
 		],
 		"description": "NelsonDJCR"
@@ -307,7 +322,14 @@
 		],
 		"description": "NelsonDJCR"
 	},
-	"integer": {
+    "date": {
+		"prefix": "-date()",
+		"body": [
+			"$$table->date('$1')$2;$3"
+		],
+		"description": "NelsonDJCR"
+	},
+    "integer": {
 		"prefix": "-integer()",
 		"body": [
 			"$$table->integer('$1')$2;$3"
@@ -340,18 +362,21 @@
 	"Create Validato": {
 		"prefix": "-v.create",
 		"body": [
-			"$$rules = [",
-			"	",
+			"$$rules = ["
+			"	'$1'=>'$2'"
+			"];"
+			"$$messages = ["
+			"	'$3'=>'$4'"
 			"];",
-			"$$messages = [",
-			"	",
-			"];",
-			"$validator = Validator:make($r->all(), $rules, $messages);",
-			"if($validator->fails()){",
-			"	return response()->json(['status",
-			"",
+			"$$validator = Validator::make($$r->all(), $$rules, $$messages);",
+			"if ($$validator->fails()) {",
+			"	return response()->json(['status' => 406, 'msg' => $$validator->errors()->first()]);",
+			"} else {",
+			"	return response()->json([",
+			"		'msg' => 'Datos guardados correctamente',",
+			"		'code' => 200,",
+			"	]);",
 			"}",
-			"",
 		],
 		"description": "NelsonDJCR"
 	},
