@@ -1,4 +1,13 @@
 {
+	// -------Menu-------
+	// data
+	// For blade
+	// Migrations
+	// VALIDATOR
+	// ${1:}
+	// ${1|one,two,three|}
+
+	// data
 	"useController": {
 		"prefix": "use.controller",
 		"body": [
@@ -7,6 +16,28 @@
 		"description": "NelsonDJCR"
 	},
 	
+
+	"::insert": {
+		"prefix": "::insert",
+		"body": [
+			"::insert(${1:request()->except('_token')});"
+		],
+		"description": "NelsonDJCR"
+	},
+	"::all": {
+		"prefix": "::all",
+		"body": [
+			"::all()"
+		],
+		"description": "NelsonDJCR"
+	},
+	"::where": {
+		"prefix": "::where",
+		"body": [
+			"::where('$1',$2)$3"
+		],
+		"description": "NelsonDJCR"
+	},
 	"getNmaeImage": {
 		"prefix": "-getName",
 		"body": [
@@ -27,11 +58,25 @@
 			"Route::post('/$route', [$Controller::class,'$function']);"
 		],
 		"description": "NelsonDJCR"
-	},	
+	},
 	"php {}": {
 		"prefix": "{{",
 		"body": [
 			"{{ $1 }}"
+		],
+		"description": "NelsonDJCR"
+	},
+	"base64_encode()": {
+		"prefix": "{{",
+		"body": [
+			"base64_encode($1);"
+		],
+		"description": "NelsonDJCR"
+	},
+	"base64_decode()": {
+		"prefix": "{{",
+		"body": [
+			"base64_decode($1);"
 		],
 		"description": "NelsonDJCR"
 	},
@@ -96,7 +141,6 @@
 			"	 ->update([",
 			"	  	'$3' =>$4 ,",
 			"	  ]);",
-
 		],
 		"description": "NelsonDJCR"
 	},
@@ -111,7 +155,7 @@
 		"prefix": "insert.",
 		"body": [
 			" DB::table('$1')->insert([",
-				"'$2' => $3,",
+			"'$2' => $3,",
 			"]);"
 		],
 		"description": "NelsonDJCR"
@@ -180,14 +224,20 @@
 		],
 		"description": "NelsonDJCR"
 	},
-	
 	"Json": {
-		"prefix": "json",
+		"prefix": "json-code",
 		"body": [
 			"return response()->json([",
-			"	'$1code' =>$2 200,",
-			"	'$3msg' => '$4',",
+			"	'code' =>$1 200,",
+			"	'msg' => '$2',",
 			"]);"
+		],
+		"description": "NelsonDJCR"
+	},
+	"return": {
+		"prefix": "return.all",
+		"body": [
+			"return request()->all();"
 		],
 		"description": "NelsonDJCR"
 	},
@@ -214,74 +264,71 @@
 		],
 		"description": "NelsonDJCR"
 	},
-
-    // Migrations
-    "$table->": {
+	// Migrations
+	"$table->": {
 		"prefix": "table->",
 		"body": [
 			"$$table->$1",
 		],
 		"description": "NelsonDJCR"
 	},
-    "ForeingKey": {
+	"ForeingKey": {
 		"prefix": "-foreing",
 		"body": [
 			"$$table->foreignId('$1')->nullable()->constrained('$2');$3"
 		],
 		"description": "NelsonDJCR"
 	},
-    "nullable": {
+	"nullable": {
 		"prefix": "-nullable()",
 		"body": [
 			"->nullable()$1"
 		],
 		"description": "NelsonDJCR"
 	},
-    "after": {
+	"after": {
 		"prefix": "-after()",
 		"body": [
 			"->after('$1')"
 		],
 		"description": "NelsonDJCR"
 	},
-    "default": {
+	"default": {
 		"prefix": "-default()",
 		"body": [
 			"->default('$1')$2"
 		],
 		"description": "NelsonDJCR"
 	},
-    "String": {
+	"String": {
 		"prefix": "-string()",
 		"body": [
 			"$$table->string('$1')$2;$3"
 		],
 		"description": "NelsonDJCR"
 	},
-    "integer": {
+	"integer": {
 		"prefix": "-integer()",
 		"body": [
 			"$$table->integer('$1')$2;$3"
 		],
 		"description": "NelsonDJCR"
 	},
-    "text": {
+	"text": {
 		"prefix": "-text()",
 		"body": [
 			"$$table->text('$1')$2;$3"
 		],
 		"description": "NelsonDJCR"
 	},
-    "drop": {
+	"drop": {
 		"prefix": "-drop()",
 		"body": [
 			"$$table->dropColumn('$1')$2;$3"
 		],
 		"description": "NelsonDJCR"
 	},
-    
-    
-    "dropForeing": {
+	"dropForeing": {
 		"prefix": "-dropForeing",
 		"body": [
 			"$$table->dropForeign(['$1']);",
@@ -289,11 +336,8 @@
 		],
 		"description": "NelsonDJCR"
 	},
-	
-	
-	
 	// **** VALIDATOR FORM REQUEST  **** //
-    "Create Validato": {
+	"Create Validato": {
 		"prefix": "-v.create",
 		"body": [
 			"$$rules = [",
@@ -318,7 +362,7 @@
 		],
 		"description": "NelsonDJCR"
 	},
-    "V numeric": {
+	"V numeric": {
 		"prefix": "-v.r.numeric",
 		"body": [
 			"'$1' => 'required|numeric'$2,"
@@ -326,13 +370,11 @@
 		"description": "NelsonDJCR"
 	},
 	// **** VALIDATOR MESAGGES  **** //
-    "V msg": {
+	"V msg": {
 		"prefix": "-v.m.required",
 		"body": [
 			"'$1.required' => 'El $2 es requerido',$3"
 		],
 		"description": "NelsonDJCR"
 	},
-   
-	
 }

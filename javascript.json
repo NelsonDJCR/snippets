@@ -45,10 +45,24 @@
 		],
 		"description": "Log output to console"
 	},
+	"id Form": {
+		"prefix": "idform",
+		"body": [
+			"$(\"#$1\").serialize()$2",
+		],
+		"description": "Log output to console"
+	},
 	"Form Data": {
 		"prefix": "formData",
 		"body": [
 			"var form = new FormData($('#$1')[0])$2",
+		],
+		"description": "Log output to console"
+	},
+	"Form append": {
+		"prefix": ".append()",
+		"body": [
+			".append('$1')",
 		],
 		"description": "Log output to console"
 	},
@@ -105,13 +119,9 @@
 	"post": {
 		"prefix": "post",
 		"body": [
-			"$.post('$1',",
-			"{",
-			"	$2",
-			"}).done(function(e){",
-			"	alert(e)",
-			"	return false;",
-			"});",
+			"$.post('$1', ${2:{$3}}).done(function(e){",
+			"	$4",
+			"});"
 		],
 		"description": "$.post"
 	},

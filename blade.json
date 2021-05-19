@@ -52,5 +52,19 @@
 		],
 		"description": "NelsonDJCR"
 	},
+	"base64_encode()": {
+		"prefix": "{{",
+		"body": [
+			"base64_encode($1);"
+		],
+		"description": "NelsonDJCR"
+	},
+	"base64_decode()": {
+		"prefix": "{{",
+		"body": [
+			"base64_decode($1);"
+		],
+		"description": "NelsonDJCR"
+	},
 
 }
