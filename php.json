@@ -9,128 +9,127 @@
 
 	// data
 	"useController": {
-		"prefix": "use.controller",
+		"prefix": "use.controller 🌌",
 		"body": [
 			"use App\\Http\\Controllers\\ $1;"
 		],
-		"description": "NelsonDJCR"
+		"description": "NelsonDJCR 🐉"
 	},
-	
 
 	"::insert": {
-		"prefix": "::insert",
+		"prefix": "::insert 🌌",
 		"body": [
 			"::insert(${1:request()->except('_token')});"
 		],
-		"description": "NelsonDJCR"
+		"description": "NelsonDJCR 🐉"
 	},
 	"::all": {
-		"prefix": "::all",
+		"prefix": "::all 🌌",
 		"body": [
 			"::all()"
 		],
-		"description": "NelsonDJCR"
+		"description": "NelsonDJCR 🐉"
 	},
 	"::where": {
-		"prefix": "::where",
+		"prefix": "::where 🌌",
 		"body": [
 			"::where('$1',$2)$3"
 		],
-		"description": "NelsonDJCR"
+		"description": "NelsonDJCR 🐉"
 	},
 	"strtoupper($str)": {
-		"prefix": "str.upper",
+		"prefix": "str.upper 🌌",
 		"body": [
 			"strtoupper($1)$2"
 		],
-		"description": "NelsonDJCR"
+		"description": "NelsonDJCR 🐉"
 	},
 	"getNmaeImage": {
-		"prefix": "-getName",
+		"prefix": "-getName 🌌",
 		"body": [
 			"->getClientOriginalName();$1"
 		],
-		"description": "NelsonDJCR"
+		"description": "NelsonDJCR 🐉"
 	},
 	"Web": {
-		"prefix": "route.get",
+		"prefix": "route.get 🌌",
 		"body": [
 			"Route::get('/$route', [$Controller::class,'$function']);"
 		],
-		"description": "NelsonDJCR"
+		"description": "NelsonDJCR 🐉"
 	},
 	"web-post": {
-		"prefix": "route.post",
+		"prefix": "route.post 🌌",
 		"body": [
 			"Route::post('/$route', [$Controller::class,'$function']);"
 		],
-		"description": "NelsonDJCR"
+		"description": "NelsonDJCR 🐉"
 	},
 	"php {}": {
-		"prefix": "{{",
+		"prefix": "{{ 🌌",
 		"body": [
 			"{{ $1 }}"
 		],
-		"description": "NelsonDJCR"
+		"description": "NelsonDJCR 🐉"
 	},
 	"base64_encode()": {
-		"prefix": "{{",
+		"prefix": "{{ 🌌",
 		"body": [
 			"base64_encode($1);"
 		],
-		"description": "NelsonDJCR"
+		"description": "NelsonDJCR 🐉"
 	},
 	"base64_decode()": {
-		"prefix": "{{",
+		"prefix": "{{ 🌌",
 		"body": [
 			"base64_decode($1);"
 		],
-		"description": "NelsonDJCR"
+		"description": "NelsonDJCR 🐉"
 	},
 	"post": {
-		"prefix": "post",
+		"prefix": "post 🌌",
 		"body": [
 			"$$_POST['$1'];"
 		],
-		"description": "NelsonDJCR"
+		"description": "NelsonDJCR 🐉"
 	},
 	"var": {
-		"prefix": "var",
+		"prefix": "var 🌌",
 		"body": [
 			"$$1;"
 		],
-		"description": "NelsonDJCR"
+		"description": "NelsonDJCR 🐉"
 	},
 	"Print Y": {
-		"prefix": "print_y",
+		"prefix": "print_y 🌌",
 		"body": [
 			"echo '<pre>'; die(print_r($$1)); "
 		],
-		"description": "NelsonDJCR"
+		"description": "NelsonDJCR 🐉"
 	},
 	"Die": {
-		"prefix": "die",
+		"prefix": "die 🌌",
 		"body": [
 			"die('$1');$2",
 		],
-		"description": "NelsonDJCR"
+		"description": "NelsonDJCR 🐉"
 	},
 	"echo": {
-		"prefix": "echo",
+		"prefix": "echo 🌌",
 		"body": [
 			"echo \"$1\";",
 		],
-		"description": "NelsonDJCR"
+		"description": "NelsonDJCR 🐉"
 	},
 	"protected": {
-		"prefix": "-protected",
+		"prefix": "-protected 🌌",
 		"body": [
 			"protected $$table = '$1';",
 		],
-		"description": "NelsonDJCR"
+		"description": "NelsonDJCR 🐉"
 	},
 	"try": {
-		"prefix": "try.",
+		"prefix": "try. 🌌",
 		"body": [
 			"try{",
 			"	  $1",
@@ -138,10 +137,10 @@
 			"	return response()->json(['msg' => $$ex->getMessage()$2]);",
 			"}",
 		],
-		"description": "NelsonDJCR"
+		"description": "NelsonDJCR 🐉"
 	},
 	"update": {
-		"prefix": "update.",
+		"prefix": "update. 🌌",
 		"body": [
 			"DB::table('$1')",
 			"	 ->where('id', $$r->$2)",
@@ -149,257 +148,245 @@
 			"	  	'$3' =>$4 ,",
 			"	  ]);",
 		],
-		"description": "NelsonDJCR"
+		"description": "NelsonDJCR 🐉"
 	},
 	"query": {
-		"prefix": "query.",
+		"prefix": "query. 🌌",
 		"body": [
 			"DB::table('$1')->where('id', $$r->$2)->$get()"
 		],
-		"description": "NelsonDJCR"
+		"description": "NelsonDJCR 🐉"
 	},
 	"insert": {
-		"prefix": "insert.",
+		"prefix": "insert. 🌌",
 		"body": [
 			" DB::table('$1')->insert([",
 			"'$2' => $3,",
 			"]);"
 		],
-		"description": "NelsonDJCR"
+		"description": "NelsonDJCR 🐉"
 	},
 	//**** For blade ****//
 	"select": {
-		"prefix": "-select",
+		"prefix": "-select 🌌",
 		"body": [
 			"->select('$1')$2",
 		],
-		"description": "NelsonDJCR"
+		"description": "NelsonDJCR 🐉"
 	},
 	"take": {
-		"prefix": "-take",
+		"prefix": "-take 🌌",
 		"body": [
 			"->take($1)$2",
 		],
-		"description": "NelsonDJCR"
+		"description": "NelsonDJCR 🐉"
 	},
 	"Request $r": {
-		"prefix": ".request $r",
+		"prefix": ".request $r 🌌",
 		"body": [
 			"Request $$r",
 		],
-		"description": "NelsonDJCR"
+		"description": "NelsonDJCR 🐉"
 	},
 	"->with": {
-		"prefix": "-with",
+		"prefix": "-with 🌌",
 		"body": [
 			"->with(['$1'=>$2])$3",
 		],
-		"description": "NelsonDJCR"
+		"description": "NelsonDJCR 🐉"
 	},
 	"where": {
-		"prefix": "->where",
+		"prefix": "->where 🌌",
 		"body": [
 			"->where('$1',$2)$3",
 		],
 		"description": "BLADE Where"
 	},
 	"first": {
-		"prefix": "-first",
+		"prefix": "-first 🌌",
 		"body": [
 			"->first()",
 		],
-		"description": "NelsonDJCR"
+		"description": "NelsonDJCR 🐉"
 	},
 	"get": {
-		"prefix": "-get()",
+		"prefix": "-get() 🌌",
 		"body": [
 			"->get()",
 		],
-		"description": "NelsonDJCR"
+		"description": "NelsonDJCR 🐉"
 	},
 	"leftjoin": {
-		"prefix": "-leftjoin",
+		"prefix": "-leftjoin 🌌",
 		"body": [
 			"->leftjoin(\"$1\", \"$1.id\", \"$3.$4\")$5",
 		],
-		"description": "NelsonDJCR"
+		"description": "NelsonDJCR 🐉"
 	},
 	"save();": {
-		"prefix": "-save();",
+		"prefix": "-save(); 🌌",
 		"body": [
 			"->save();",
 		],
-		"description": "NelsonDJCR"
+		"description": "NelsonDJCR 🐉"
 	},
 	"Json": {
-		"prefix": "ret.json",
+		"prefix": "ret.json 🌌",
 		"body": [
 			"return response()->json([",
 			"	'code' =>$1 200,",
 			"	'msg' => '$2',",
 			"]);"
 		],
-		"description": "NelsonDJCR"
+		"description": "NelsonDJCR 🐉"
 	},
 	"return": {
-		"prefix": "return.all",
+		"prefix": "return.all 🌌",
 		"body": [
 			"return request()->all();"
 		],
-		"description": "NelsonDJCR"
+		"description": "NelsonDJCR 🐉"
 	},
 	"ResponseJson": {
-		"prefix": "ret.all",
+		"prefix": "ret.all 🌌",
 		"body": [
 			"return request()->all();$1",
 		],
-		"description": "NelsonDJCR"
+		"description": "NelsonDJCR 🐉"
 	},
 	"return Status": {
-		"prefix": "ret.status",
+		"prefix": "ret.status 🌌",
 		"body": [
 			"return response()->json([",
 			"	'code' =>'$1 200'",
 			"	'msg' => '$2'",
 			"]);"
 		],
-		"description": "NelsonDJCR"
+		"description": "NelsonDJCR 🐉"
 	},
 	"$table": {
-		"prefix": "$table->",
+		"prefix": "$table-> 🌌",
 		"body": [
 			"$$table->$1"
 		],
-		"description": "NelsonDJCR"
+		"description": "NelsonDJCR 🐉"
 	},
 	"useModel": {
-		"prefix": "use.model",
+		"prefix": "use.model 🌌",
 		"body": [
 			"use App\\Models\\ $1;"
 		],
-		"description": "NelsonDJCR"
+		"description": "NelsonDJCR 🐉"
 	},
 	// Migrations
 	"$table->": {
-		"prefix": "table->",
+		"prefix": "table-> 🌌",
 		"body": [
 			"$$table->$1",
 		],
-		"description": "NelsonDJCR"
+		"description": "NelsonDJCR 🐉"
 	},
 	"ForeingKey": {
-		"prefix": "-foreing",
+		"prefix": "-foreing 🌌",
 		"body": [
 			"$$table->foreignId('$1')->nullable()->constrained('$2');$3"
 		],
-		"description": "NelsonDJCR"
+		"description": "NelsonDJCR 🐉"
 	},
 	"nullable": {
-		"prefix": "-nullable()",
+		"prefix": "-nullable() 🌌",
 		"body": [
 			"->nullable()$1"
 		],
-		"description": "NelsonDJCR"
+		"description": "NelsonDJCR 🐉"
 	},
 	"after": {
-		"prefix": "-after()",
+		"prefix": "-after() 🌌",
 		"body": [
 			"->after('$1')"
 		],
-		"description": "NelsonDJCR"
+		"description": "NelsonDJCR 🐉"
 	},
 	"default": {
-		"prefix": "-default()",
+		"prefix": "-default() 🌌",
 		"body": [
 			"->default('$1')$2"
 		],
-		"description": "NelsonDJCR"
+		"description": "NelsonDJCR 🐉"
 	},
 	"String": {
-		"prefix": "-string()",
+		"prefix": "-string() 🌌",
 		"body": [
 			"$$table->string('$1')$2;$3"
 		],
-		"description": "NelsonDJCR"
+		"description": "NelsonDJCR 🐉"
 	},
     "date": {
-		"prefix": "-date()",
+		"prefix": "-date() 🌌",
 		"body": [
 			"$$table->date('$1')$2;$3"
 		],
-		"description": "NelsonDJCR"
+		"description": "NelsonDJCR 🐉"
 	},
     "integer": {
-		"prefix": "-integer()",
+		"prefix": "-integer() 🌌",
 		"body": [
 			"$$table->integer('$1')$2;$3"
 		],
-		"description": "NelsonDJCR"
+		"description": "NelsonDJCR 🐉"
 	},
 	"text": {
-		"prefix": "-text()",
+		"prefix": "-text() 🌌",
 		"body": [
 			"$$table->text('$1')$2;$3"
 		],
-		"description": "NelsonDJCR"
+		"description": "NelsonDJCR 🐉"
 	},
 	"drop": {
-		"prefix": "-drop()",
+		"prefix": "-drop() 🌌",
 		"body": [
 			"$$table->dropColumn('$1')$2;$3"
 		],
-		"description": "NelsonDJCR"
+		"description": "NelsonDJCR 🐉"
 	},
 	"dropForeing": {
-		"prefix": "-dropForeing",
+		"prefix": "-dropForeing 🌌",
 		"body": [
 			"$$table->dropForeign(['$1']);",
 			"$$table->dropColumn('$1');"
 		],
-		"description": "NelsonDJCR"
+		"description": "NelsonDJCR 🐉"
 	},
 	// **** VALIDATOR FORM REQUEST  **** //
 	"Create Validato": {
-		"prefix": "-v.create",
+		"prefix": "new.rules 🌌",
 		"body": [
-			"$$rules = ["
-			"	'$1'=>'$2'"
-			"];"
-			"$$messages = ["
-			"	'$3'=>'$4'"
+			"// use Illuminate\\Support\\Facades\\Validator;",
+			"$$rules = [",
+			"	'${1:name}'=>'required|$2'$3",
 			"];",
-			"$$validator = Validator::make($$r->all(), $$rules, $$messages);",
+			"$$messages = [",
+			"	'$1.required'=>'${5:message}'",
+			"];",
+			"$$validator = Validator$6::make(request()->all(), $$rules, $$messages);",
 			"if ($$validator->fails()) {",
-			"	return response()->json(['status' => 406, 'msg' => $$validator->errors()->first()]);",
-			"} else {",
-			"	return response()->json([",
-			"		'msg' => 'Datos guardados correctamente',",
-			"		'code' => 200,",
-			"	]);",
-			"}",
+			"	return response()->json(['code' => 406, 'msg' => $$validator->errors()->first()]);",
+			"}"
 		],
-		"description": "NelsonDJCR"
+		"description": "NelsonDJCR 🐉"
 	},
-	"V required": {
-		"prefix": "-v.rule",
+	"Rules": {
+		"prefix": "| 🌌",
 		"body": [
-			"'$1' => 'required|numeric$2',$3"
+			"|${1| ,required,email,min:1,max:255,string,pasword,integer,image,date,digits_between:7-10,mimes:pdf,after:today,unique:TABLE-COLUMN|}$2"
 		],
-		"description": "NelsonDJCR"
+		"description": "NelsonDJCR 🐉"
 	},
-	"V numeric": {
-		"prefix": "-v.r.numeric",
+	"2Rules": {
+		"prefix": ",, 🌌",
 		"body": [
-			"'$1' => 'required|numeric'$2,"
+			"|${1| ,required,email,min:1,max:255,string,pasword,integer,image,date,digits_between:7-10,mimes:pdf,after:today,unique:TABLE-COLUMN|}$2"
 		],
-		"description": "NelsonDJCR"
-	},
-	// **** VALIDATOR MESAGGES  **** //
-	"V msg": {
-		"prefix": "-v.m.required",
-		"body": [
-			"'$1.required' => 'El $2 es requerido',$3"
-		],
-		"description": "NelsonDJCR"
+		"description": "NelsonDJCR 🐉"
 	},
 }

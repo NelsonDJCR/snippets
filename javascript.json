@@ -41,7 +41,21 @@
 	"Create id 💻": {
 		"prefix": "id 🌌",
 		"body": [
-			"$(\"#$1\")$2",
+			"$('${1|#,.|}$2')$3",
+		],
+		"description": "NelsonDJCR 🐉"
+	},
+	"isChecked 💻": {
+		"prefix": "cheked 🌌",
+		"body": [
+			"$('${1|#,.|}').is(':checked')",
+		],
+		"description": "NelsonDJCR 🐉"
+	},
+	"getName 💻": {
+		"prefix": "name 🌌",
+		"body": [
+			"$('input[name=\"$1\"]')$2",
 		],
 		"description": "NelsonDJCR 🐉"
 	},
@@ -207,6 +221,28 @@
 		],
 		"description": "NelsonDJCR 🐉"
 	},
+	"addClass 💻": {
+		"prefix": ".addClass. 🌌",
+		"body": [
+			".addClass('$1')$2"
+		],
+		"description": "NelsonDJCR 🐉"
+	},
+	
+	"parent 💻": {
+		"prefix": ".parent(). 🌌",
+		"body": [
+			".parent()$1"
+		],
+		"description": "NelsonDJCR 🐉"
+	},
+	"remove 💻": {
+		"prefix": ".remove(). 🌌",
+		"body": [
+			".remove()$1"
+		],
+		"description": "NelsonDJCR 🐉"
+	},
 
 	// Vue
 	"Axios 💻": {
@@ -234,27 +270,35 @@
 	"SweetAlert 💻": {
 		"prefix": "sw.success 🌌",
 		"body": [
-			"Swal.fire('¡$1!','$2','success' )"
+			"Swal.fire('¡$1!','$2','success')"
 		],
 		"description": "NelsonDJCR 🐉"
-	}
-	,
-	"SweetAlertw 💻": {
+	},
+	"SweetAlert error 💻": {
 		"prefix": "sw.error 🌌",
 		"body": [
-			"Swal.fire('¡$1!','$2','error' )"
+			"Swal.fire('¡$1!','$2','error')"
 		],
 		"description": "NelsonDJCR 🐉"
-	}
-	,
+	},
+	"SweetAlert warning 💻": {
+		"prefix": "sw.warning 🌌",
+		"body": [
+			"Swal.fire('¡$1!','$2','warning')"
+		],
+		"description": "NelsonDJCR 🐉"
+	},
+
 	"RedirecSweet 💻": {
 		"prefix": ".then 🌌",
 		"body": [
 			".then(function(){ window.location = '$1'; });",
 		],
 		"description": "NelsonDJCR 🐉"
-	}
-	,
+	},
+
+
+
 	"Redirec 💻": {
 		"prefix": "redirect",
 		"body": [
