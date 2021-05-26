@@ -215,9 +215,23 @@
 		"description": "NelsonDJCR 🐉"
 	},
 	"location 💻": {
-		"prefix": "location. 🌌",
+		"prefix": "location() 🌌",
 		"body": [
 			"window.location.href = '$1'"
+		],
+		"description": "NelsonDJCR 🐉"
+	},
+	"reload 💻": {
+		"prefix": "reload() 🌌",
+		"body": [
+			"location.reload()$1"
+		],
+		"description": "NelsonDJCR 🐉"
+	},
+	"rand 💻": {
+		"prefix": "rand() 🌌",
+		"body": [
+			"Math.floor(Math.random() * (10000 - 5000)) + 5000"
 		],
 		"description": "NelsonDJCR 🐉"
 	},
@@ -228,13 +242,7 @@
 		],
 		"description": "NelsonDJCR 🐉"
 	},
-	"remove 💻": {
-		"prefix": ".removeClass. 🌌",
-		"body": [
-			".removeClass('$1')$2"
-		],
-		"description": "NelsonDJCR 🐉"
-	},
+	
 	"parent 💻": {
 		"prefix": ".parent(). 🌌",
 		"body": [

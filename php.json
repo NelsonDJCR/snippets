@@ -16,6 +16,42 @@
 		"description": "NelsonDJCR 🐉"
 	},
 
+
+
+
+	"Filter": {
+		"prefix": "-whereFilter 🌌",
+		"body": [
+			"->where(function ($$query) use ($$r) {",
+            "    if (isset($$r['$1'])) {",
+            "        if (!empty($$r['$1']))",
+            "            $$query->orwhere(\"${2:Table}.${3:Column}\", ${4:typefilter} , $$r['$1']);",
+            "    }",
+            "})",
+		],
+		"description": "NelsonDJCR 🐉"
+	},
+	"TypeFilter": {
+		"prefix": "typefilter 🌌",
+		"body": [
+			"${1|\">=\",\"<=\",like|}"
+		],
+		"description": "NelsonDJCR 🐉"
+	},
+	"like": {
+		"prefix": "like 🌌",
+		"body": [
+			"\"like\", \"%\".$$r['$1'].\"%\");$2#"
+		],
+		"description": "NelsonDJCR 🐉"
+	},
+
+
+
+
+
+
+
 	"::insert": {
 		"prefix": "::insert 🌌",
 		"body": [
