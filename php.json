@@ -28,13 +28,27 @@
             "            $$query->orwhere(\"${2:Table}.${3:Column}\", ${4:typefilter} , $$r['$1']);",
             "    }",
             "})",
+            "#${5:-whereFilter}",
+		],
+		"description": "NelsonDJCR 🐉"
+	},
+	"#Filter": {
+		"prefix": "#-whereFilter 🌌",
+		"body": [
+			"->where(function ($$query) use ($$r) {",
+            "    if (isset($$r['$1'])) {",
+            "        if (!empty($$r['$1']))",
+            "            $$query->orwhere(\"${2:Table}.${3:Column}\", ${4:typefilter} , $$r['$1']);",
+            "    }",
+            "})",
+            "#${5:-whereFilter}",
 		],
 		"description": "NelsonDJCR 🐉"
 	},
 	"TypeFilter": {
 		"prefix": "typefilter 🌌",
 		"body": [
-			"${1|\">=\",\"<=\",like|}"
+			"${1|\">=\",\"<=\",\"=\",like|}"
 		],
 		"description": "NelsonDJCR 🐉"
 	},
@@ -56,6 +70,20 @@
 		"prefix": "::insert 🌌",
 		"body": [
 			"::insert(${1:request()->except('_token')});"
+		],
+		"description": "NelsonDJCR 🐉"
+	},
+	"::find": {
+		"prefix": "::find 🌌",
+		"body": [
+			"::find($1);"
+		],
+		"description": "NelsonDJCR 🐉"
+	},
+	"::inRandomOrder()": {
+		"prefix": "::inRandomOrder() 🌌",
+		"body": [
+			"::inRandomOrder()->get();"
 		],
 		"description": "NelsonDJCR 🐉"
 	},
@@ -84,6 +112,13 @@
 		"prefix": "-getName 🌌",
 		"body": [
 			"->getClientOriginalName();$1"
+		],
+		"description": "NelsonDJCR 🐉"
+	},
+	"->random()": {
+		"prefix": "-random() 🌌",
+		"body": [
+			"->random($1)$2"
 		],
 		"description": "NelsonDJCR 🐉"
 	},
@@ -232,7 +267,7 @@
 		"description": "NelsonDJCR 🐉"
 	},
 	"where": {
-		"prefix": "->where 🌌",
+		"prefix": "-where 🌌",
 		"body": [
 			"->where('$1',$2)$3",
 		],
@@ -270,23 +305,8 @@
 		"prefix": "ret.json 🌌",
 		"body": [
 			"return response()->json([",
-			"	'code' =>$1 200,",
-			"	'msg' => '$2',",
+			"	'$1' =>$2,",
 			"]);"
-		],
-		"description": "NelsonDJCR 🐉"
-	},
-	"return": {
-		"prefix": "return.all 🌌",
-		"body": [
-			"return request()->all();"
-		],
-		"description": "NelsonDJCR 🐉"
-	},
-	"ResponseJson": {
-		"prefix": "ret.all 🌌",
-		"body": [
-			"return request()->all();$1",
 		],
 		"description": "NelsonDJCR 🐉"
 	},
@@ -294,9 +314,23 @@
 		"prefix": "ret.status 🌌",
 		"body": [
 			"return response()->json([",
-			"	'code' =>'$1 200'",
-			"	'msg' => '$2'",
+			"	'code' =>200,",
+			"	'msg' => '$1'",
 			"]);"
+		],
+		"description": "NelsonDJCR 🐉"
+	},
+	"Code": {
+		"prefix": "code 🌌",
+		"body": [
+			"${1|200,406,500|}"
+		],
+		"description": "NelsonDJCR 🐉"
+	},
+	"ResponseJson": {
+		"prefix": "ret.all 🌌",
+		"body": [
+			"return request()->all();$1",
 		],
 		"description": "NelsonDJCR 🐉"
 	},
@@ -346,7 +380,14 @@
 	"default": {
 		"prefix": "-default() 🌌",
 		"body": [
-			"->default('$1')$2"
+			"->default($1)$2"
+		],
+		"description": "NelsonDJCR 🐉"
+	},
+	"r": {
+		"prefix": "-r() 🌌",
+		"body": [
+			"$$r->$1"
 		],
 		"description": "NelsonDJCR 🐉"
 	},
