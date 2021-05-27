@@ -294,6 +294,13 @@
 		],
 		"description": "NelsonDJCR 🐉"
 	},
+	"join": {
+		"prefix": "-join 🌌",
+		"body": [
+			"->join(\"$1\", \"$1.id\", \"$3.id_$1$4\")$5",
+		],
+		"description": "NelsonDJCR 🐉"
+	},
 	"save();": {
 		"prefix": "-save(); 🌌",
 		"body": [
@@ -306,6 +313,15 @@
 		"body": [
 			"return response()->json([",
 			"	'$1' =>$2,",
+			"]);"
+		],
+		"description": "NelsonDJCR 🐉"
+	},
+	"Return Table": {
+		"prefix": "ret.table 🌌",
+		"body": [
+			"return response()->json([",
+			"	'table' =>$2,",
 			"]);"
 		],
 		"description": "NelsonDJCR 🐉"
@@ -349,6 +365,17 @@
 		"description": "NelsonDJCR 🐉"
 	},
 	// Migrations
+
+	"BelongsTo": {
+		"prefix": "-belongsTo 🌌",
+		"body": [
+			"public function ${1:nameFunction}()",
+			"{",
+			"	return $$this->belongsTo(${2:MODEL}::class${3:, 'id$4'});",
+			"}$5",
+		],
+		"description": "NelsonDJCR 🐉"
+	},
 	"$table->": {
 		"prefix": "table-> 🌌",
 		"body": [
@@ -359,7 +386,7 @@
 	"ForeingKey": {
 		"prefix": "-foreing 🌌",
 		"body": [
-			"$$table->foreignId('$1')->nullable()->constrained('$2');$3"
+			"$$table->foreignId('$1')->nullable()->constrained('$2$1');$3"
 		],
 		"description": "NelsonDJCR 🐉"
 	},
@@ -395,6 +422,13 @@
 		"prefix": "-string() 🌌",
 		"body": [
 			"$$table->string('$1')$2;$3"
+		],
+		"description": "NelsonDJCR 🐉"
+	},
+	"float": {
+		"prefix": "-float() 🌌",
+		"body": [
+			"$$table->float('$1')$2;$3"
 		],
 		"description": "NelsonDJCR 🐉"
 	},
