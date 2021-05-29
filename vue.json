@@ -1,15 +1,97 @@
 {
-	// Place your snippets for vue here. Each snippet is defined under a snippet name and has a prefix, body and 
-	// description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
-	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the 
-	// same ids are connected.
-	// Example:
-	"Fun": {
-		"prefix": ".xxxx ",
-		"body": [
-			"console.log('$1');",
-		],
-		"description": "Log output to console"
-	}
 
+	"if status": {
+		"prefix": "ifstatus 🌌",
+		"body": [
+			"if(r.data.code== 200){",
+			"	swal.fire(r.data.msg,'$1', \"success\")",
+			"}else if(r.data.code== 406){",
+			"	swal.fire(r.data.msg,'$2', \"warning\")",
+			"}else{",
+			"	swal.fire(\"Fallo en el sevidor!\",'error', \"error\")",
+			"}",
+		],
+		"description": "NelsonDJCR 🐉"
+	},
+
+
+	"Axios 💻": {
+		"prefix": "axios.post 🌌",
+		"body": [
+			"axios.post(`/$1`, this.$2).then((r) => {",
+			"	$3",
+			"});"
+		],
+		"description": "NelsonDJCR 🐉"
+	},
+	"alert 💻": {
+		"prefix": "alert 🌌",
+		"body": [
+			"alert($1)"
+		],
+		"description": "NelsonDJCR 🐉"
+	},
+	"console 💻": {
+		"prefix": "log 🌌",
+		"body": [
+			"console.log($1)"
+		],
+		"description": "NelsonDJCR 🐉"
+	},
+	"Axios get 💻": {
+		"prefix": "axios.get 🌌",
+		"body": [
+			"axios.get(`/$1`).then((r) => {",
+			"	$3",
+			"});"
+		],
+		"description": "NelsonDJCR 🐉"
+	},
+	"Function 💻": {
+		"prefix": "vfun 🌌",
+		"body": [
+			"$1($id){",
+			"	$3",
+			"},"
+		],
+		"description": "NelsonDJCR 🐉"
+	},
+	// SweetAlert2
+
+	"SweetAlert 💻": {
+		"prefix": "sw.success 🌌",
+		"body": [
+			"Swal.fire('¡$1!','$2','success')"
+		],
+		"description": "NelsonDJCR 🐉"
+	},
+	"SweetAlert error 💻": {
+		"prefix": "sw.error 🌌",
+		"body": [
+			"Swal.fire('¡$1!','$2','error')"
+		],
+		"description": "NelsonDJCR 🐉"
+	},
+	"SweetAlert warning 💻": {
+		"prefix": "sw.warning 🌌",
+		"body": [
+			"Swal.fire('¡$1!','$2','warning')"
+		],
+		"description": "NelsonDJCR 🐉"
+	},
+
+	"RedirecSweet 💻": {
+		"prefix": ".then 🌌",
+		"body": [
+			".then(function(){ window.location = '$1'; });",
+		],
+		"description": "NelsonDJCR 🐉"
+	},
+	".find 💻": {
+		"prefix": ".find 🌌",
+		"body": [
+			".find($1)",
+		],
+		"description": "NelsonDJCR 🐉"
+	},
 }

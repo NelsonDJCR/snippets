@@ -472,14 +472,13 @@
 	"Create Validato": {
 		"prefix": "new.rules 🌌",
 		"body": [
-			"// use Illuminate\\Support\\Facades\\Validator;",
 			"$$rules = [",
-			"	'${1:name}'=>'required|$2'$3",
+			"	$1",
 			"];",
 			"$$messages = [",
-			"	'$1.required'=>'${5:message}'",
+			"	$2",
 			"];",
-			"$$validator = Validator$6::make(request()->all(), $$rules, $$messages);",
+			"$$validator = Validator$6:${7:/*Validator [Illuminate\\Support\\Facades]*/}:make(request()->all(), $$rules, $$messages);",
 			"if ($$validator->fails()) {",
 			"	return response()->json(['code' => 406, 'msg' => $$validator->errors()->first()]);",
 			"}"

@@ -49,9 +49,9 @@
 	"if status": {
 		"prefix": "ifstatus 🌌",
 		"body": [
-			"if($1== 200){",
+			"if(e.code$1== 200){",
 			"	$2",
-			"}else if($3== 200){",
+			"}else if(e.code$3== 406){",
 			"	$4",
 			"}else{",
 			"	swal.fire(\"Fallo en el sevidor!\",'error', \"error\")",
@@ -272,28 +272,6 @@
 		],
 		"description": "NelsonDJCR 🐉"
 	},
-
-	// Vue
-	"Axios 💻": {
-		"prefix": "v.axios 🌌",
-		"body": [
-			"axios.post('/$1', this.$2).then((r) => {",
-			"	$3",
-			"});"
-		],
-		"description": "NelsonDJCR 🐉"
-	},
-	"Function 💻": {
-		"prefix": "v.fun 🌌",
-		"body": [
-			"$1($id){",
-			"	$3",
-			"},"
-		],
-		"description": "NelsonDJCR 🐉"
-	},
-	
-
 	// SweetAlert2
 
 	"SweetAlert 💻": {
