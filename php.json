@@ -273,6 +273,13 @@
 		],
 		"description": "BLADE Where"
 	},
+	"orderBy": {
+		"prefix": "->orderBy() 🌌",
+		"body": [
+			"->orderBy('$1','${2|DESC,ASC|}')",
+		],
+		"description": "BLADE Where"
+	},
 	"first": {
 		"prefix": "-first 🌌",
 		"body": [
