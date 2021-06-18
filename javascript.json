@@ -49,9 +49,9 @@
 	"if status": {
 		"prefix": "ifstatus 🌌",
 		"body": [
-			"if(e.code$1== 200){",
+			"if(r.code$1== 200){",
 			"	$2",
-			"}else if(e.code$3== 406){",
+			"}else if(r.code$1== 406){",
 			"	$4",
 			"}else{",
 			"	swal.fire(\"Fallo en el sevidor!\",'error', \"error\")",
@@ -392,6 +392,46 @@
 		],
 		"description": "NelsonDJCR 🐉"
 	},
+
+	// Vue JS
+
+
+	"Axios 💻": {
+		"prefix": "axios.post 🌌",
+		"body": [
+			"axios.post(`/$1`, this.$2).then((r) => {",
+			"	$3",
+			"});"
+		],
+		"description": "NelsonDJCR 🐉"
+	},
+	"alert 💻": {
+		"prefix": "alert 🌌",
+		"body": [
+			"alert($1)"
+		],
+		"description": "NelsonDJCR 🐉"
+	},
+	
+	"Axios get 💻": {
+		"prefix": "axios.get 🌌",
+		"body": [
+			"axios.get(`/$1`).then((r) => {",
+			"	$3",
+			"});"
+		],
+		"description": "NelsonDJCR 🐉"
+	},
+	"Function 💻": {
+		"prefix": "vfun 🌌",
+		"body": [
+			"$1($id){",
+			"	$3",
+			"},"
+		],
+		"description": "NelsonDJCR 🐉"
+	},
+	
 	
 
 

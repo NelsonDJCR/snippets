@@ -65,11 +65,18 @@
 
 
 
-
 	"::insert": {
 		"prefix": "::insert 🌌",
 		"body": [
-			"::insert(${1:request()->except('_token')});"
+			"::insert(${1:request()${2|->except('_token'),->all()|}});"
+		],
+		"description": "NelsonDJCR 🐉"
+	},
+	"::update": {
+		"prefix": "::update 🌌",
+		"body": [
+			"::find(request()->id)->update(request()->all());"
+			
 		],
 		"description": "NelsonDJCR 🐉"
 	},
@@ -192,13 +199,7 @@
 		],
 		"description": "NelsonDJCR 🐉"
 	},
-	"protected": {
-		"prefix": "-protected 🌌",
-		"body": [
-			"protected $$table = '$1';",
-		],
-		"description": "NelsonDJCR 🐉"
-	},
+	
 	"try": {
 		"prefix": "try. 🌌",
 		"body": [
@@ -237,6 +238,27 @@
 		],
 		"description": "NelsonDJCR 🐉"
 	},
+	//**** Models ****//
+
+	"protected": {
+		"prefix": "-protected 🌌",
+		"body": [
+			"protected $$table = '$1';",
+		],
+		"description": "NelsonDJCR 🐉"
+	},
+	"fillable": {
+		"prefix": "-fillable 🌌",
+		"body": [
+			"protected $$fillable = [",
+			"	'$1',",
+			"];",
+		],
+		"description": "NelsonDJCR 🐉"
+	},
+
+
+
 	//**** For blade ****//
 	"select": {
 		"prefix": "-select 🌌",
@@ -312,6 +334,20 @@
 		"prefix": "-save(); 🌌",
 		"body": [
 			"->save();",
+		],
+		"description": "NelsonDJCR 🐉"
+	},
+	"return": {
+		"prefix": "return 🌌",
+		"body": [
+			"return $1;"
+		],
+		"description": "NelsonDJCR 🐉"
+	},
+	"request": {
+		"prefix": "request 🌌",
+		"body": [
+			"request()->$1"
 		],
 		"description": "NelsonDJCR 🐉"
 	},
@@ -393,7 +429,7 @@
 	"ForeingKey": {
 		"prefix": "-foreing 🌌",
 		"body": [
-			"$$table->foreignId('$1')->nullable()->constrained('$2$1');$3"
+			"$$table->foreignId('$1')->constrained('$2$1');$3"
 		],
 		"description": "NelsonDJCR 🐉"
 	},
@@ -460,6 +496,13 @@
 		],
 		"description": "NelsonDJCR 🐉"
 	},
+	"status": {
+		"prefix": "-status() 🌌",
+		"body": [
+			"$$table->integer('state')->default(${1|1,0|});$2"
+		],
+		"description": "NelsonDJCR 🐉"
+	},
 	"drop": {
 		"prefix": "-drop() 🌌",
 		"body": [
@@ -477,15 +520,15 @@
 	},
 	// **** VALIDATOR FORM REQUEST  **** //
 	"Create Validato": {
-		"prefix": "new.rules 🌌",
+		"prefix": "new.validator 🌌",
 		"body": [
 			"$$rules = [",
-			"	$1",
+			"	$3",
 			"];",
 			"$$messages = [",
-			"	$2",
+			"	$4",
 			"];",
-			"$$validator = Validator$6:${7:/*Validator [Illuminate\\Support\\Facades]*/}:make(request()->all(), $$rules, $$messages);",
+			"$$validator = Validator$1:${2:/*Validator [Illuminate\\Support\\Facades]*/}:make(request()->all(), $$rules, $$messages);",
 			"if ($$validator->fails()) {",
 			"	return response()->json(['code' => 406, 'msg' => $$validator->errors()->first()]);",
 			"}"
@@ -506,4 +549,14 @@
 		],
 		"description": "NelsonDJCR 🐉"
 	},
+	"Valide": {
+		"prefix": "new.rule 🌌",
+		"body": [
+			"'$1'=>'required|$2',$3"
+		],
+		"description": "NelsonDJCR 🐉"
+	},
+
+	
+
 }
