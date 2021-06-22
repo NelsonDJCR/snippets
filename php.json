@@ -76,7 +76,13 @@
 		"prefix": "::update 🌌",
 		"body": [
 			"::find(request()->id)->update(request()->all());"
-			
+		],
+		"description": "NelsonDJCR 🐉"
+	},
+	"::delete": {
+		"prefix": "::delete 🌌",
+		"body": [
+			"::find(request()->id)->delete();"
 		],
 		"description": "NelsonDJCR 🐉"
 	},
@@ -373,8 +379,8 @@
 		"prefix": "ret.status 🌌",
 		"body": [
 			"return response()->json([",
-			"	'code' =>${1|200,400,406|},",
-			"	'msg' => '${2:Datos guardados correctamente}'",
+			"	'code'=>${1|200,400,406|},",
+			"	'msg'=>'${2:Datos guardados correctamente}'",
 			"]);"
 		],
 		"description": "NelsonDJCR 🐉"
@@ -525,10 +531,7 @@
 			"$$rules = [",
 			"	$3",
 			"];",
-			"$$messages = [",
-			"	$4",
-			"];",
-			"$$validator = Validator$1:${2:/*Validator [Illuminate\\Support\\Facades]*/}:make(request()->all(), $$rules, $$messages);",
+			"$$validator = Validator$1:${2:/*Validator [Illuminate\\Support\\Facades]*/}:make(request()->all(), $$rules);",
 			"if ($$validator->fails()) {",
 			"	return response()->json(['code' => 406, 'msg' => $$validator->errors()->first()]);",
 			"}"
