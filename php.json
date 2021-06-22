@@ -25,7 +25,7 @@
 			"->where(function ($$query) use ($$r) {",
             "    if (isset($$r['$1'])) {",
             "        if (!empty($$r['$1']))",
-            "            $$query->orwhere(\"${2:Table}.${3:Column}\", ${4:typefilter} , $$r['$1']);",
+            "            $$query->orwhere(\"${2:Table}.$1\", ${4:typefilter} , $$r['$1']);",
             "    }",
             "})",
             "#${5:-whereFilter}",
@@ -38,7 +38,7 @@
 			"->where(function ($$query) use ($$r) {",
             "    if (isset($$r['$1'])) {",
             "        if (!empty($$r['$1']))",
-            "            $$query->orwhere(\"${2:Table}.${3:Column}\", ${4:typefilter} , $$r['$1']);",
+            "            $$query->orwhere(\"${2:Table}.$1\", ${4:typefilter} , $$r['$1']);",
             "    }",
             "})",
             "#${5:-whereFilter}",
@@ -373,8 +373,8 @@
 		"prefix": "ret.status 🌌",
 		"body": [
 			"return response()->json([",
-			"	'code' =>200,",
-			"	'msg' => '$1'",
+			"	'code' =>${1|200,400,406|},",
+			"	'msg' => '${2:Datos guardados correctamente}'",
 			"]);"
 		],
 		"description": "NelsonDJCR 🐉"
