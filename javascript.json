@@ -45,6 +45,13 @@
 		],
 		"description": "NelsonDJCR 🐉"
 	},
+	"Modal id 💻": {
+		"prefix": ".modal() 🌌",
+		"body": [
+			".modal('${1|show,hide|}$2')$3",
+		],
+		"description": "NelsonDJCR 🐉"
+	},
 	
 	"if status": {
 		"prefix": "ifstatus 🌌",
@@ -82,9 +89,18 @@
 		"description": "NelsonDJCR 🐉"
 	},
 	"id Form": {
-		"prefix": "idform",
+		"prefix": "idform 🌌",
 		"body": [
 			"$(\"#$1\").serialize()$2",
+		],
+		"description": "Log output to console"
+	},
+	"eacho": {
+		"prefix": ".each 🌌",
+		"body": [
+			"$.each($1, function (key, i) {",
+			"	$2",
+			"}",
 		],
 		"description": "Log output to console"
 	},
@@ -92,6 +108,29 @@
 		"prefix": "formData 🌌",
 		"body": [
 			"var form = new FormData($('#$1')[0])$2",
+		],
+		"description": "NelsonDJCR 🐉"
+	},
+	"GetForm": {
+		"prefix": "form 🌌",
+		"body": [
+			"$('#$1')[0]$2",
+		],
+		"description": "NelsonDJCR 🐉"
+	},
+	"reset": {
+		"prefix": ".reset() 🌌",
+		"body": [
+			".reset()$1",
+		],
+		"description": "NelsonDJCR 🐉"
+	},
+	"date": {
+		"prefix": "newDate() 🌌",
+		"body": [
+			"var date = new Date();",
+			"date = ('0' + date.getDate()).slice(-2) + '-' + ('0' + (date.getMonth()+1)).slice(-2) + '-' + date.getFullYear();",
+			"$1",
 		],
 		"description": "NelsonDJCR 🐉"
 	},

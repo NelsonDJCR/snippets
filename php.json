@@ -56,12 +56,13 @@
 		],
 		"description": "NelsonDJCR 🐉"
 	},
-
-
-
-
-
-
+	"date_format": {
+		"prefix": "-date_format 🌌",
+		"body": [
+			"date_format(date_create($1), ${2|'d-m-Y','Y-m-d'|})"
+		],
+		"description": "NelsonDJCR 🐉"
+	},
 	"::insert": {
 		"prefix": "::insert 🌌",
 		"body": [
@@ -422,6 +423,30 @@
 		],
 		"description": "NelsonDJCR 🐉"
 	},
+	"HasOne": {
+		"prefix": "-hasOne 🌌",
+		"body": [
+			"public function ${1:nameFunction}()",
+			"{",
+			"	return $$this->hasOne(${2:MODEL}::class${3:, 'id$4'});",
+			"}$5",
+		],
+		"description": "NelsonDJCR 🐉"
+	},
+	"HasMany": {
+		"prefix": "-hasMany 🌌",
+		"body": [
+			"public function ${1:nameFunction}()",
+			"{",
+			"	return $$this->hasMany(${2:MODEL}::class${3:, 'id$4'});",
+			"}$5",
+		],
+		"description": "NelsonDJCR 🐉"
+	},
+
+
+
+
 	"$table->": {
 		"prefix": "table-> 🌌",
 		"body": [
