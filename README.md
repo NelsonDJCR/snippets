@@ -1,5 +1,5 @@
-# Snippers for VS Code
-_Snippes for VisualStudio Code_
+# Snippets
+_For VisualStudio Code_
 
 
 ## Instalación 🚀
