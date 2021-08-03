@@ -46,9 +46,25 @@
 		"description": "NelsonDJCR 🐉"
 	},
 	"Modal id 💻": {
-		"prefix": ".modal() 🌌",
+		"prefix": ".modal 🌌",
 		"body": [
-			".modal('${1|show,hide|}$2')$3",
+			"$('#$1').modal('${3|show,hide|}$4')$5",
+		],
+		"description": "NelsonDJCR 🐉"
+	},
+	"GetName": {
+		"prefix": "get.name 🌌",
+		"body": [
+			"$(\"input[name='$1']\")",
+		],
+		"description": "NelsonDJCR 🐉"
+	},
+	"Change": {
+		"prefix": ".change 🌌",
+		"body": [
+			".change(function() {",
+			"	$1",	
+			"});",
 		],
 		"description": "NelsonDJCR 🐉"
 	},

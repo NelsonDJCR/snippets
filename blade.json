@@ -1,5 +1,12 @@
 {
 	
+	"PRUEBA SYNC": {
+		"prefix": "PRUEBA SYNC",
+		"body": [
+			"PRUEBA SYNC"
+		],
+		"description": "PRUEBA SYNC"
+	},
 	"cor": {
 		"prefix": "llaves",
 		"body": [
