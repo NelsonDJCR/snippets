@@ -4,7 +4,7 @@ _For VisualStudio Code_
 
 ## Instalación 🚀
 
-### Open execute of windows**🔧
+### Open *execute of windows* 🔧
 
 
 ```
