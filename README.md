@@ -10,7 +10,7 @@ _For VisualStudio Code_
 ```
 windows + r
 ```
-### Open Code/user with ⌨️
+### Open folder Code/user with ⌨️
 
 ```
 %appdata%/code/User/
