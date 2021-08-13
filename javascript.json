@@ -68,6 +68,17 @@
 		],
 		"description": "NelsonDJCR 🐉"
 	},
+	"hover": {
+		"prefix": ".hover 🌌",
+		"body": [
+			".hover(function() {",
+			"	$1",
+			"},function(){",
+			"	$2",
+			"});"
+		],
+		"description": "NelsonDJCR 🐉"
+	},
 	
 	"if status": {
 		"prefix": "ifstatus 🌌",
