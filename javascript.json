@@ -20,7 +20,7 @@
 			"	type: \"POST\",",
 			"	url: '$1',",
 			"	data: $2,",
-			"	headers: {'X-CSRF-TOKEN': $('meta[name='csrf-token']').attr('content')},",
+			"	headers: {'X-CSRF-TOKEN': $('meta[name=\"csrf-token\"]').attr('content')},",
 			"	contentType: false,",
 			"	success: function (r) {",
 			"	  if (r == 1) {",
@@ -48,7 +48,7 @@
 	"Modal id 💻": {
 		"prefix": ".modal 🌌",
 		"body": [
-			"$('#$1').modal('${3|show,hide|}$4')$5",
+			"$('#$1').modal('${3|show,hide,toggle|}$4')$5",
 		],
 		"description": "NelsonDJCR 🐉"
 	},
@@ -390,17 +390,17 @@
 		"prefix": "sw.question 🌌",
 		"body": [
 			"Swal.fire({",
-				"title: '¿Eliminar registro?',",
-				"text: 'Esta acción no se puede revertir',",
-				"icon: 'question',",
-				"showCancelButton: true,",
-				"confirmButtonText: 'Aceptar',",
-				"cancelButtonText: 'Cancelar'",
-			  "}).then((result) => {",
-				"if (result.value) {",
-				  "Swal.fire('Eliminado!', 'Registro eliminado correctamente.', 'success');",
-				"}",
-			  "});"
+			"	title: '¿Eliminar registro?',",
+			"	text: 'Esta acción no se puede revertir',",
+			"	icon: 'question',",
+			"	showCancelButton: true,",
+			"	confirmButtonText: 'Aceptar',",
+			"	cancelButtonText: 'Cancelar'",
+			"}).then((result) => {",
+			"	if (result.value) {",
+			"		Swal.fire('Eliminado!', 'Registro eliminado correctamente.', 'success');",
+			"	}",
+			"});"
 		],
 		"description": "NelsonDJCR 🐉"
 	},
@@ -491,12 +491,38 @@
 	"Function 💻": {
 		"prefix": "vfun 🌌",
 		"body": [
-			"$1($id){",
-			"	$3",
+			"async $1(){",
+			"	const r = await axios.$3",
 			"},"
 		],
 		"description": "NelsonDJCR 🐉"
 	},
+
+	"vue.resource": {
+		"prefix": "vue.resource 🌌",
+		"body": [
+			"export default {",
+			"	data() {",
+			"		return {",
+			"		//contacts: [],",
+			"		};",
+			"	},",
+			"	methods: {",
+			"		async list() {",
+			"		//const r = await axios.get(\"route\");",
+			"		//this.contacts = r.data;",
+			"		//console.log(r.data);",
+			"		},",
+			"	},",
+			"	created() {",
+			"		//this.list();",
+			"	},",
+			"};",
+		],
+		"description": "NelsonDJCR 🐉"
+	},
+
+
 	
 	
 

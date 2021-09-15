@@ -136,14 +136,28 @@
 	"Web": {
 		"prefix": "route.get 🌌",
 		"body": [
-			"Route::get('/$route', [$Controller::class,'$function']);"
+			"Route::get('/{$route}', [$Controller::class,'$function']);"
 		],
 		"description": "NelsonDJCR 🐉"
 	},
 	"web-post": {
 		"prefix": "route.post 🌌",
 		"body": [
-			"Route::post('/$route', [$Controller::class,'$function']);"
+			"Route::post('/{$route}', [$Controller::class,'$function']);"
+		],
+		"description": "NelsonDJCR 🐉"
+	},
+	"web-apiResource": {
+		"prefix": "route.apiResource 🌌",
+		"body": [
+			"Route::apiResource('/${route}', ${Controller}::class);"
+		],
+		"description": "NelsonDJCR 🐉"
+	},
+	"web-resource": {
+		"prefix": "route.resource 🌌",
+		"body": [
+			"Route::resource('/${route}', ${Controller}::class);"
 		],
 		"description": "NelsonDJCR 🐉"
 	},
@@ -411,7 +425,7 @@
 		],
 		"description": "NelsonDJCR 🐉"
 	},
-	// Migrations
+	
 
 	"BelongsTo": {
 		"prefix": "-belongsTo 🌌",
@@ -446,7 +460,7 @@
 
 
 
-
+	// Migrations
 	"$table->": {
 		"prefix": "table-> 🌌",
 		"body": [
@@ -546,6 +560,23 @@
 		],
 		"description": "NelsonDJCR 🐉"
 	},
+	"comment": {
+		"prefix": "-comment() 🌌",
+		"body": [
+			"->comment('$1')$2"
+		],
+		"description": "NelsonDJCR 🐉"
+	},
+	"unique": {
+		"prefix": "-unique() 🌌",
+		"body": [
+			"$$table->unique('$1')$2;"
+		],
+		"description": "NelsonDJCR 🐉"
+	},
+
+
+
 	// **** VALIDATOR FORM REQUEST  **** //
 	"Create Validato": {
 		"prefix": "new.validator 🌌",

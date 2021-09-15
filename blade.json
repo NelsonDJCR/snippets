@@ -41,7 +41,7 @@
 	"Storage": {
 		"prefix": ".storage",
 		"body": [
-			"{{ asset(\"storage\").\"/\".$route }}"
+			"{{ asset('storage/'.$route) }}"
 		],
 		"description": "NelsonDJCR"
 	},
