@@ -53,7 +53,7 @@
 		"description": "NelsonDJCR 🐉"
 	},
 	"GetName": {
-		"prefix": "get.name 🌌",
+		"prefix": "name 🌌",
 		"body": [
 			"$(\"input[name='$1']\")",
 		],
@@ -320,6 +320,13 @@
 		"prefix": ".addClass. 🌌",
 		"body": [
 			".addClass('$1')$2"
+		],
+		"description": "NelsonDJCR 🐉"
+	},
+	"removeClass 💻": {
+		"prefix": ".removeClass. 🌌",
+		"body": [
+			".removeClass('$1')$2"
 		],
 		"description": "NelsonDJCR 🐉"
 	},

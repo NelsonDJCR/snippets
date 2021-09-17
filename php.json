@@ -311,14 +311,21 @@
 		"body": [
 			"->where('$1',$2)$3",
 		],
-		"description": "BLADE Where"
+		"description": "NelsonDJCR 🐉"
+	},
+	"wherea": {
+		"prefix": "-wherelike 🌌",
+		"body": [
+			"->where('$1','LIKE',$2)$3",
+		],
+		"description": "NelsonDJCR 🐉"
 	},
 	"orderBy": {
 		"prefix": "->orderBy() 🌌",
 		"body": [
 			"->orderBy('$1','${2|DESC,ASC|}')",
 		],
-		"description": "BLADE Where"
+		"description": "NelsonDJCR 🐉"
 	},
 	"first": {
 		"prefix": "-first 🌌",
