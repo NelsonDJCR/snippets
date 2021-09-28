@@ -601,14 +601,14 @@
 	"Rules": {
 		"prefix": "| 🌌",
 		"body": [
-			"|${1| ,required,email,min:1,max:255,string,pasword,alpha,integer,image,date,digits_between:7-10,mimes:pdf,after:today,unique:TABLE,COLUMN|}$2"
+			"|${1| ,required,email,min:1,max:255,string,pasword,alpha,integer,image,date,digits_between:7-10,mimes:pdf,after:today,digits:10,unique:TABLE,COLUMN|}$2"
 		],
 		"description": "NelsonDJCR 🐉"
 	},
 	"2Rules": {
 		"prefix": ",, 🌌",
 		"body": [
-			"|${1| ,required,email,min:1,max:255,string,pasword,alpha,integer,image,date,digits_between:7-10,mimes:pdf,after:today,unique:TABLE,COLUMN|}$2"
+			"|${1| ,required,email,min:1,max:255,string,pasword,alpha,integer,image,date,digits_between:7-10,mimes:pdf,after:today,digits:10,unique:TABLE,COLUMN|}$2"
 		],
 		"description": "NelsonDJCR 🐉"
 	},
