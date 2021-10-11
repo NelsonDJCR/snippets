@@ -385,6 +385,13 @@
 		],
 		"description": "NelsonDJCR 🐉"
 	},
+	"ret.1": {
+		"prefix": "ret.1 🌌",
+		"body": [
+			"return 1;$1"
+		],
+		"description": "NelsonDJCR 🐉"
+	},
 	"Return Table": {
 		"prefix": "ret.table 🌌",
 		"body": [
