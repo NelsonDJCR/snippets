@@ -73,5 +73,13 @@
 		],
 		"description": "NelsonDJCR"
 	},
+		// HTML
+		"back 💻": {
+			"prefix": "onclick.back 🌌",
+			"body": [
+				"onclick=\"history.back()\"",
+			],
+			"description": "NelsonDJCR 🐉"
+		},
 
 }

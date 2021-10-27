@@ -101,6 +101,7 @@
 		],
 		"description": "NelsonDJCR 🐉"
 	},
+	
 	"getName 💻": {
 		"prefix": "name 🌌",
 		"body": [
@@ -365,6 +366,18 @@
 		"prefix": "sw.warning 🌌",
 		"body": [
 			"Swal.fire('¡$1!','$2','warning')"
+		],
+		"description": "NelsonDJCR 🐉"
+	},
+
+	"SweetAlert custom 💻": {
+		"prefix": "sw.custom 🌌",
+		"body": [
+			"showCancelButton: true,",
+			"confirmButtonText: 'Aceptar',",
+			"cancelButtonText: 'Cancelar',",
+			"cancelButtonColor: '#20c0ff',",
+			"cancelButtonColor: '#000'",
 		],
 		"description": "NelsonDJCR 🐉"
 	},
