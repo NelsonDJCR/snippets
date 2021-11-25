@@ -1,13 +1,18 @@
 {
-	// -------Menu-------
-	// data
-	// For blade
-	// Migrations
-	// VALIDATOR
+	// -----------------Menu----------------- //
+	//                                        //
+	//		//*****    DATA   *****//         //
+	//		//*****    BLADE   *****//        //
+	//		//***** MIGRATIONS *****//        //
+	//		//***** VALIDATOR *****//         //
+	//		//*****  INERTIA  *****//         //
+	//                                        //
+	// -------------------------------------- //
+
 	// ${1:}
 	// ${1|one,two,three|}
 
-	// data
+	//*****    DATA   *****//
 	"useController": {
 		"prefix": "use.controller 🌌",
 		"body": [
@@ -70,6 +75,13 @@
 		],
 		"description": "NelsonDJCR 🐉"
 	},
+	"::create": {
+		"prefix": "::create 🌌",
+		"body": [
+			"::create(request()->all());"
+		],
+		"description": "NelsonDJCR 🐉"
+	},
 	"::update": {
 		"prefix": "::update 🌌",
 		"body": [
@@ -112,6 +124,15 @@
 		],
 		"description": "NelsonDJCR 🐉"
 	},
+	
+	"redirect.route": {
+		"prefix": "redirect.route 🌌",
+		"body": [
+			"Redirect::route('$1');$2"
+		],
+		"description": "NelsonDJCR 🐉"
+	},
+	
 	"strtoupper($str)": {
 		"prefix": "str.upper 🌌",
 		"body": [
@@ -277,7 +298,7 @@
 
 
 
-	//**** For blade ****//
+	//*****    BLADE   *****//
 	"select": {
 		"prefix": "-select 🌌",
 		"body": [
@@ -359,6 +380,13 @@
 		"prefix": "-save(); 🌌",
 		"body": [
 			"->save();",
+		],
+		"description": "NelsonDJCR 🐉"
+	},
+	"saveFILE();": {
+		"prefix": "-savefile(); 🌌",
+		"body": [
+			"$$r->file('${1:name}')->store('uploads$2', 'public');$3",
 		],
 		"description": "NelsonDJCR 🐉"
 	},
@@ -474,7 +502,7 @@
 
 
 
-	// Migrations
+	//***** MIGRATIONS *****//
 	"$table->": {
 		"prefix": "table-> 🌌",
 		"body": [
@@ -598,7 +626,7 @@
 
 
 
-	// **** VALIDATOR FORM REQUEST  **** //
+	//***** VALIDATOR *****//
 	"Create Validato": {
 		"prefix": "new.validator 🌌",
 		"body": [
@@ -634,6 +662,14 @@
 		"description": "NelsonDJCR 🐉"
 	},
 
+	//*****  INERTIA  *****//
+	"Render": {
+		"prefix": "in.render 🌌",
+		"body": [
+			"Inertia::render('${1:view}'${2:,}$3);"
+		],
+		"description": "NelsonDJCR 🐉"
+	},
 
 	
 
