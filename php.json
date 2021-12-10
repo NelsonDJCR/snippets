@@ -4,8 +4,9 @@
 	//		//*****    DATA   *****//         //
 	//		//*****    BLADE   *****//        //
 	//		//***** MIGRATIONS *****//        //
-	//		//***** VALIDATOR *****//         //
-	//		//*****  INERTIA  *****//         //
+	//		//*****  VALIDATOR *****//         //
+	//		//*****   INERTIA  *****//         //
+	//		//*****    ROUTE   *****//         //
 	//                                        //
 	// -------------------------------------- //
 
@@ -154,31 +155,42 @@
 		],
 		"description": "NelsonDJCR 🐉"
 	},
-	"Web": {
-		"prefix": "route.get 🌌",
+
+	
+	"route.get.function": {
+		"prefix": "route.get.function 🌌",
 		"body": [
-			"Route::get('/{$route}', [$Controller::class,'$function']);"
+			"Route::get('/${1:route}', function (){",
+			"	$2",
+			"});",
 		],
 		"description": "NelsonDJCR 🐉"
 	},
-	"web-post": {
+	"route.get": {
+		"prefix": "route.get 🌌",
+		"body": [
+			"Route::get('/${route}', [$Controller::class,'$function']);"
+		],
+		"description": "NelsonDJCR 🐉"
+	},
+	"route.post": {
 		"prefix": "route.post 🌌",
 		"body": [
-			"Route::post('/{$route}', [$Controller::class,'$function']);"
+			"Route::post('/${1:route}', [$Controller::class,'$function']);"
 		],
 		"description": "NelsonDJCR 🐉"
 	},
 	"web-apiResource": {
 		"prefix": "route.apiResource 🌌",
 		"body": [
-			"Route::apiResource('/${route}', ${Controller}::class);"
+			"Route::apiResource('/${1:route}', ${Controller}::class);"
 		],
 		"description": "NelsonDJCR 🐉"
 	},
 	"web-resource": {
 		"prefix": "route.resource 🌌",
 		"body": [
-			"Route::resource('/${route}', ${Controller}::class);"
+			"Route::resource('/${1:route}', ${Controller}::class);"
 		],
 		"description": "NelsonDJCR 🐉"
 	},
@@ -190,14 +202,14 @@
 		"description": "NelsonDJCR 🐉"
 	},
 	"base64_encode()": {
-		"prefix": "{{ 🌌",
+		"prefix": "encode 🌌",
 		"body": [
 			"base64_encode($1);"
 		],
 		"description": "NelsonDJCR 🐉"
 	},
 	"base64_decode()": {
-		"prefix": "{{ 🌌",
+		"prefix": "decode 🌌",
 		"body": [
 			"base64_decode($1);"
 		],

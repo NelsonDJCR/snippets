@@ -1,81 +1,74 @@
 {
 	
-	"PRUEBA SYNC": {
-		"prefix": "PRUEBA SYNC",
-		"body": [
-			"PRUEBA SYNC"
-		],
-		"description": "PRUEBA SYNC"
-	},
 	"cor": {
-		"prefix": "llaves",
+		"prefix": "keys  🌌",
 		"body": [
-			"{{ $1 }}"
+			"{{ $$i->$1 }}$2"
 		],
-		"description": "NelsonDJCR"
+		"description": "NelsonDJCR 🐉"
 	},
 	"assets": {
-		"prefix": ".asset",
+		"prefix": ".asset  🌌",
 		"body": [
 			"{{ asset('$1') }}"
 		],
-		"description": "NelsonDJCR"
+		"description": "NelsonDJCR 🐉"
 	},
 	"url": {
-		"prefix": ".url",
+		"prefix": ".url  🌌",
 		"body": [
 			"{{ url('/$1') }}"
 		],
-		"description": "NelsonDJCR"
+		"description": "NelsonDJCR 🐉"
 	},
 	
 	"cols": {
-		"prefix": ".responsive",
+		"prefix": ".responsive  🌌",
 		"body": [
 			"<div class='col-12 col-sm-12 col-md-$1 col-lg-$2 col-xl-$3'>",
 			"	$2",
 			"</div>",
 		],
-		"description": "NelsonDJCR"
+		"description": "NelsonDJCR 🐉"
 	},
 	"Storage": {
-		"prefix": ".storage",
+		"prefix": ".storage  🌌",
 		"body": [
 			"{{ asset('storage/'.$route) }}"
 		],
-		"description": "NelsonDJCR"
+		"description": "NelsonDJCR 🐉"
 	},
 	"Record foreach": {
-		"prefix": "-id",
+		"prefix": "-id  🌌",
 		"body": [
 			"{{ $$i->$1 }}$2"
 		],
-		"description": "NelsonDJCR"
+		"description": "NelsonDJCR 🐉"
 	},
 	"Record regsiter": {
-		"prefix": "-data",
+		"prefix": "-data  🌌",
 		"body": [
 			"{{ $$data->$1 }}$2"
 		],
-		"description": "NelsonDJCR"
+		"description": "NelsonDJCR 🐉"
 	},
 	"base64_encode()": {
-		"prefix": "{{",
+		"prefix": "{{  🌌",
 		"body": [
 			"base64_encode($1);"
 		],
-		"description": "NelsonDJCR"
+		"description": "NelsonDJCR 🐉"
 	},
 	"base64_decode()": {
-		"prefix": "{{",
+		"prefix": "{{  🌌",
 		"body": [
 			"base64_decode($1);"
 		],
-		"description": "NelsonDJCR"
+		"description": "NelsonDJCR 🐉"
 	},
 		// HTML
 		"back 💻": {
-			"prefix": "onclick.back 🌌",
+			"prefix": "onclick.back  🌌",
 			"body": [
 				"onclick=\"history.back()\"",
 			],

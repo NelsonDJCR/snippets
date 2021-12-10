@@ -27,6 +27,13 @@
 		],
 		"description": "NelsonDJCR 🐉"
 	},
+	"js {}": {
+		"prefix": "keys 🌌",
+		"body": [
+			"{{ $1 }}"
+		],
+		"description": "NelsonDJCR 🐉"
+	},
 	"Log 💻": {
 		"prefix": ".log 🌌",
 		"body": [
@@ -161,9 +168,9 @@
 	"Form append": {
 		"prefix": ".append()",
 		"body": [
-			".append('$1')",
+			".append(`$1`)",
 		],
-		"description": "Log output to console"
+		"description": "NelsonDJCR 🐉"
 	},
 	"Create click funtion": {
 		"prefix": ".click 🌌",
@@ -225,13 +232,22 @@
 		"description": "NelsonDJCR 🐉"
 	},
 	"post 💻": {
-		"prefix": "post 🌌",
+		"prefix": ".post 🌌",
 		"body": [
 			"$.post('$1', ${2:{$3}}).done(function(e){",
 			"	$4",
 			"});"
 		],
-		"description": "$.post"
+		"description": "NelsonDJCR 🐉"
+	},
+	".get 💻": {
+		"prefix": ".get 🌌",
+		"body": [
+			"$.get('/$1').done(function(e){",
+			"	$2",
+			"});"
+		],
+		"description": "NelsonDJCR 🐉"
 	},
 	"attr 💻": {
 		"prefix": ".attr 🌌",
