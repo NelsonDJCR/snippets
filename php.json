@@ -661,6 +661,19 @@
 		],
 		"description": "NelsonDJCR 🐉"
 	},
+	"Regex": {
+		"prefix": "|regex.email rule 🌌",
+		"body": [
+			"|regex:/^[_a-z0-9-]+(\\.[_a-z0-9-]+)*@[a-z0-9-]+(\\.[a-z0-9-]+)*(\\.[a-z]{2,3})$/|"
+		],
+		"description": "NelsonDJCR 🐉"
+	},
+	
+
+
+
+
+
 
 	//*****  INERTIA  *****//
 	"Render": {
