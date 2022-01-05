@@ -1,5 +1,12 @@
 {
 	
+	"espace": {
+		"prefix": "space  🌌",
+		"body": [
+			"&nbsp;"
+		],
+		"description": "NelsonDJCR 🐉"
+	},
 	"cor": {
 		"prefix": "keys  🌌",
 		"body": [
@@ -66,13 +73,38 @@
 		],
 		"description": "NelsonDJCR 🐉"
 	},
-		// HTML
-		"back 💻": {
-			"prefix": "onclick.back  🌌",
-			"body": [
-				"onclick=\"history.back()\"",
-			],
-			"description": "NelsonDJCR 🐉"
-		},
+
+
+	// Validation
+
+	
+                                                
+                                                   
+                                            
+
+	"iconValidation": {
+		"prefix": "icon_vd🌌",
+		"body": [
+			"<div class='iconCheck' style='display: none'>",
+			"	<i style='color :red;' class='fa fa-alert-icon fa-exclamation-triangle  aria-hidden='true'></i>",
+			"</div>",
+		],
+		"description": "NelsonDJCR 🐉"
+	},
+	"validations": {
+		"prefix": "vd_🌌",
+		"body": [
+			"${1|vd_letters,vd_email,vd_required,vd_numbers,vd_alpha|}"
+		],
+		"description": "NelsonDJCR 🐉"
+	},
+	// HTML
+	"back 💻": {
+		"prefix": "onclick.back  🌌",
+		"body": [
+			"onclick=\"history.back()\"",
+		],
+		"description": "NelsonDJCR 🐉"
+	},
 
 }

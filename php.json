@@ -156,9 +156,9 @@
 		"description": "NelsonDJCR 🐉"
 	},
 
-	
+	//*****    ROUTE   *****//
 	"route.get.function": {
-		"prefix": "route.get.function 🌌",
+		"prefix": "rt-get.function 🌌",
 		"body": [
 			"Route::get('/${1:route}', function (){",
 			"	$2",
@@ -167,28 +167,37 @@
 		"description": "NelsonDJCR 🐉"
 	},
 	"route.get": {
-		"prefix": "route.get 🌌",
+		"prefix": "rt-get 🌌",
 		"body": [
 			"Route::get('/${route}', [$Controller::class,'$function']);"
 		],
 		"description": "NelsonDJCR 🐉"
 	},
 	"route.post": {
-		"prefix": "route.post 🌌",
+		"prefix": "rt-post 🌌",
 		"body": [
 			"Route::post('/${1:route}', [$Controller::class,'$function']);"
 		],
 		"description": "NelsonDJCR 🐉"
 	},
 	"web-apiResource": {
-		"prefix": "route.apiResource 🌌",
+		"prefix": "rt-apiResource 🌌",
 		"body": [
 			"Route::apiResource('/${1:route}', ${Controller}::class);"
 		],
 		"description": "NelsonDJCR 🐉"
 	},
+	"route.middleware": {
+		"prefix": "rt-middleware 🌌",
+		"body": [
+			"Route::group(['middleware' => ['role:$1']], function () {",
+			"	$2",
+			"});",
+		],
+		"description": "NelsonDJCR 🐉"
+	},
 	"web-resource": {
-		"prefix": "route.resource 🌌",
+		"prefix": "rt-resource 🌌",
 		"body": [
 			"Route::resource('/${1:route}', ${Controller}::class);"
 		],
@@ -198,6 +207,20 @@
 		"prefix": "{{ 🌌",
 		"body": [
 			"{{ $1 }}"
+		],
+		"description": "NelsonDJCR 🐉"
+	},
+	"-middleware": {
+		"prefix": "-middleware() 🌌",
+		"body": [
+			"->middleware('${1|guest,auth|}');"
+		],
+		"description": "NelsonDJCR 🐉"
+	},
+	"-name": {
+		"prefix": "-name() 🌌",
+		"body": [
+			"->name('$1');"
 		],
 		"description": "NelsonDJCR 🐉"
 	},
@@ -422,6 +445,13 @@
 			"return response()->json([",
 			"	'$1' =>$2,",
 			"]);"
+		],
+		"description": "NelsonDJCR 🐉"
+	},
+	"ret.view": {
+		"prefix": "ret.view 🌌",
+		"body": [
+			"return view('$1');"
 		],
 		"description": "NelsonDJCR 🐉"
 	},
