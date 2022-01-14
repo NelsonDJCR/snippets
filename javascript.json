@@ -172,6 +172,20 @@
 		],
 		"description": "NelsonDJCR 🐉"
 	},
+	".html()": {
+		"prefix": ".html()",
+		"body": [
+			".html(`$1`)",
+		],
+		"description": "NelsonDJCR 🐉"
+	},
+	".${}": {
+		"prefix": "${}",
+		"body": [
+			"${$1}$2",
+		],
+		"description": "NelsonDJCR 🐉"
+	},
 	"Create click funtion": {
 		"prefix": ".click 🌌",
 		"body": [
