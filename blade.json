@@ -1,6 +1,13 @@
 {
 	
-	"espace": {
+	"meta:csrf": {
+		"prefix": "meta:csrf  🌌",
+		"body": [
+			"<meta name=\"csrf-token\" content=\"{{ csrf_token() }}\">"
+		],
+		"description": "NelsonDJCR 🐉"
+	},
+	"space": {
 		"prefix": "space  🌌",
 		"body": [
 			"&nbsp;"

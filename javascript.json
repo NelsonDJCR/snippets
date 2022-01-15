@@ -34,6 +34,34 @@
 		],
 		"description": "NelsonDJCR 🐉"
 	},
+	"ajax_image {}": {
+		"prefix": "ajax:image 🌌",
+		"body": [
+			"var form = new FormData($('#$1')[0]);",
+			"$.ajax({",
+			"	type: 'POST',",
+			"	url: '/$2',",
+			"	data: form,",
+			"	headers: {",
+			"		'X-CSRF-TOKEN': $('meta[name=`csrf-token`]').attr('content')",
+			"	},",
+			"	cache: false,",
+			"	contentType: false,",
+			"	processData: false,",
+			"	success: function(r) {",
+			"		if (r.code == 200) {",
+			"			Swal.fire('¡Perfecto!', 'Datos insertados correctamente', 'success')",
+			"				.then(function() {",
+			"					$3",
+			"				});",
+			"		} else {",
+			"			Swal.fire('Error', r.msg, 'error')",
+			"		}",
+			"	},",
+			"});",
+		],
+		"description": "NelsonDJCR 🐉"
+	},
 	"Log 💻": {
 		"prefix": ".log 🌌",
 		"body": [
