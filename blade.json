@@ -14,6 +14,13 @@
 		],
 		"description": "NelsonDJCR 🐉"
 	},
+	"auth::user()": {
+		"prefix": "auth::user()->$1 🌌",
+		"body": [
+			"Auth::user()->$1"
+		],
+		"description": "NelsonDJCR 🐉"
+	},
 	"cor": {
 		"prefix": "keys  🌌",
 		"body": [

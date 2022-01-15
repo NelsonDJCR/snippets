@@ -141,6 +141,20 @@
 		],
 		"description": "NelsonDJCR 🐉"
 	},
+	"auth::user()": {
+		"prefix": "auth::user()->$1 🌌",
+		"body": [
+			"Auth::user()->$1"
+		],
+		"description": "NelsonDJCR 🐉"
+	},
+	"compact()": {
+		"prefix": "compact() 🌌",
+		"body": [
+			"compact('$1')"
+		],
+		"description": "NelsonDJCR 🐉"
+	},
 	"getNmaeImage": {
 		"prefix": "-getName 🌌",
 		"body": [
