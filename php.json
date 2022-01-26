@@ -699,14 +699,14 @@
 	"Rules": {
 		"prefix": "| 🌌",
 		"body": [
-			"|${1| ,required,email,min:1,max:255,string,pasword,alpha,integer,image,date,digits_between:7-10,mimes:pdf,after:today,digits:10,unique:TABLE-COLUMN-ID|}$2"
+			"|${1| ,required,email,min:1,max:255,nullable,string,pasword,alpha,integer,image,date,digits_between:7-10,mimes:pdf,after:today,digits:10,unique:TABLE-COLUMN-ID|}$2"
 		],
 		"description": "NelsonDJCR 🐉"
 	},
 	"2Rules": {
 		"prefix": ",, 🌌",
 		"body": [
-			"|${1| ,required,email,min:1,max:255,string,pasword,alpha,integer,image,date,digits_between:7-10,mimes:pdf,after:today,digits:10,unique:TABLE-COLUMN-ID|}$2"
+			"|${1| ,required,email,min:1,max:255,nullable,string,pasword,alpha,integer,image,date,digits_between:7-10,mimes:pdf,after:today,digits:10,unique:TABLE-COLUMN-ID|}$2"
 		],
 		"description": "NelsonDJCR 🐉"
 	},
@@ -717,10 +717,17 @@
 		],
 		"description": "NelsonDJCR 🐉"
 	},
-	"Regex": {
+	"regex.email": {
 		"prefix": "|regex.email rule 🌌",
 		"body": [
 			"|regex:/^[_a-z0-9-]+(\\.[_a-z0-9-]+)*@[a-z0-9-]+(\\.[a-z0-9-]+)*(\\.[a-z]{2,3})$/|"
+		],
+		"description": "NelsonDJCR 🐉"
+	},
+	"regex.string": {
+		"prefix": "|regex.string rule 🌌",
+		"body": [
+			"|regex:/^[\\pL\\s\\-]+$/u"
 		],
 		"description": "NelsonDJCR 🐉"
 	},
