@@ -34,8 +34,8 @@
 		],
 		"description": "NelsonDJCR 🐉"
 	},
-	"ajax_image {}": {
-		"prefix": "ajax:image 🌌",
+	"ajax:file {}": {
+		"prefix": "ajax:file 🌌",
 		"body": [
 			"var form = new FormData($('#$1')[0]);",
 			"$.ajax({",
@@ -43,14 +43,14 @@
 			"	url: '/$2',",
 			"	data: form,",
 			"	headers: {",
-			"		'X-CSRF-TOKEN': $('meta[name=`csrf-token`]').attr('content')",
+			"		'X-CSRF-TOKEN': $('meta[name=\"csrf-token\"]').attr('content')",
 			"	},",
 			"	cache: false,",
 			"	contentType: false,",
 			"	processData: false,",
 			"	success: function(r) {",
 			"		if (r.code == 200) {",
-			"			Swal.fire('¡Perfecto!', 'Datos insertados correctamente', 'success')",
+			"			Swal.fire(r.msg, 'Datos insertados correctamente', 'success')",
 			"				.then(function() {",
 			"					$3",
 			"				});",
@@ -115,9 +115,9 @@
 		"prefix": "ret-status 🌌",
 		"body": [
 			"if (r.code == 200) {",
-			"    Swal.fire(`${e.msg}`,``,`success`)",
+			"    Swal.fire(`${r.msg}`,``,`success`)",
 			"}else if (r.code == 406) {",
-			"    Swal.fire(`${e.msg}`,``,`error`)",
+			"    Swal.fire(`${r.msg}`,``,`error`)",
 			"}else{",
 			"	Swal.fire(`Fallo en el servidor`,``,`error`)",
 			"}",
@@ -276,7 +276,7 @@
 	"post 💻": {
 		"prefix": ".post 🌌",
 		"body": [
-			"$.post(`z$1`z, ${2:{$3}}).done(function(r){",
+			"$.post(`$1`, ${2:{$3}}).done(function(r){",
 			"	$4",
 			"});"
 		],

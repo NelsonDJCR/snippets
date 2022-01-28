@@ -687,7 +687,7 @@
 		"prefix": "new.validator 🌌",
 		"body": [
 			"$$rules = [",
-			"	$3",
+			"    ''=>'required|',$3",
 			"];",
 			"$$validator = Validator$1:${2:/*Validator [Illuminate\\Support\\Facades]*/}:make(request()->all(), $$rules);",
 			"if ($$validator->fails()) {",
