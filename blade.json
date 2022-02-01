@@ -43,6 +43,14 @@
 		"description": "NelsonDJCR 🐉"
 	},
 	
+	"route": {
+		"prefix": "-route 🌌",
+		"body": [
+			"{{ route('$1') }}"
+		],
+		"description": "NelsonDJCR 🐉"
+	},
+	
 	"cols": {
 		"prefix": ".responsive  🌌",
 		"body": [

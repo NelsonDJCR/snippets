@@ -234,7 +234,7 @@
 	"-name": {
 		"prefix": "-name() 🌌",
 		"body": [
-			"->name('$1');"
+			"->name('$1')"
 		],
 		"description": "NelsonDJCR 🐉"
 	},
