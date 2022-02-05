@@ -126,13 +126,42 @@
 		"description": "NelsonDJCR 🐉"
 	},
 	
-	"redirect.route": {
-		"prefix": "redirect.route 🌌",
+	"rt-back": {
+		"prefix": "rt-back 🌌",
 		"body": [
-			"Redirect::route('$1');$2"
+			"return redirect()->back()$1;"
 		],
 		"description": "NelsonDJCR 🐉"
 	},
+	"-withInput()": {
+		"prefix": "-withInput() 🌌",
+		"body": [
+			"->withInput()$1"
+		],
+		"description": "NelsonDJCR 🐉"
+	},
+	"-withErrors([])": {
+		"prefix": "-withErrors([]) 🌌",
+		"body": [
+			"->withErrors([${1:''=>,}])"
+		],
+		"description": "NelsonDJCR 🐉"
+	},
+	"-withErrorsStatus([])": {
+		"prefix": "-withErrorsStatus([]) 🌌",
+		"body": [
+			"->withErrors([",
+            "    'code' => ${1|200,406,500|},",
+            "    'msg' => \"\""
+            "])",
+		],
+		"description": "NelsonDJCR 🐉"
+	},
+
+
+
+
+
 	
 	"strtoupper($str)": {
 		"prefix": "str.upper 🌌",
@@ -369,10 +398,10 @@
 		],
 		"description": "NelsonDJCR 🐉"
 	},
-	"->with": {
+	"-with": {
 		"prefix": "-with 🌌",
 		"body": [
-			"->with(['$1'=>$2])$3",
+			"->with('$1')$2",
 		],
 		"description": "NelsonDJCR 🐉"
 	},
@@ -683,15 +712,55 @@
 
 
 	//***** VALIDATOR *****//
-	"Create Validato": {
-		"prefix": "new.validator 🌌",
+	"new-js-validator": {
+		"prefix": "new-js-validator 🌌",
 		"body": [
 			"$$rules = [",
 			"    ''=>'required|',$3",
+			"    ''=>'required|',$4",
 			"];",
 			"$$validator = Validator$1:${2:/*Validator [Illuminate\\Support\\Facades]*/}:make(request()->all(), $$rules);",
+			"$$errors = json_decode($$validator->errors(), true);",
+			"$$inputs = '';",
+			"foreach ($$errors as $$key => $$value) {",
+			"	$$new = $$inputs . $$key . \"#\";",
+			"	$$inputs = str_replace($$inputs, $$new, $$inputs);",
+			"}",
 			"if ($$validator->fails()) {",
-			"	return response()->json(['code' => 406, 'msg' => $$validator->errors()->first()]);",
+			"	return response()->json([",
+            "	    'code' => 406,",
+            "	    'msg' => $$validator->errors()->first(),",
+            "	    'input' => substr(substr($$inputs, 0, -1), 1),",
+            "	    'errors' =>  count($$errors),",
+            "	]);",
+			"}"
+		],
+		"description": "NelsonDJCR 🐉"
+	},
+	"new-blade-validator": {
+		"prefix": "new-blade-validator 🌌",
+		"body": [
+			"$$rules = [",
+			"    ''=>'required|',$3",
+			"    ''=>'required|',$4",
+			"];",
+			"$$validator = Validator$1:${2:/*Validator [Illuminate\\Support\\Facades]*/}:make(request()->all(), $$rules);",
+			"$$errors = json_decode($$validator->errors(), true);",
+			"$$inputs = '';",
+			"foreach ($$errors as $$key => $$value) {",
+			"	$$new = $$inputs . $$key . \"#\";",
+			"	$$inputs = str_replace($$inputs, $$new, $$inputs);",
+			"}",
+			"if ($$validator->fails()) {",
+			"	return redirect()",
+			"	->back()",
+			"	->withInput()",
+			"	->withErrors([",
+			"		'code' => 200,",
+			"		'msg' => $$validator->errors()->first(),",
+			"		'input' => substr(substr($$inputs, 0, -1), 1),",
+			"		'errors' => count($$errors)",
+			"	]);",
 			"}"
 		],
 		"description": "NelsonDJCR 🐉"
@@ -732,11 +801,6 @@
 		"description": "NelsonDJCR 🐉"
 	},
 	
-
-
-
-
-
 
 	//*****  INERTIA  *****//
 	"Render": {
