@@ -461,10 +461,10 @@
 		],
 		"description": "NelsonDJCR 🐉"
 	},
-	"saveFILE();": {
-		"prefix": "-savefile(); 🌌",
+	"fileSave();": {
+		"prefix": "-fileSave(); 🌌",
 		"body": [
-			"$$r->file('${1:name}')->store('uploads$2', 'public');$3",
+			"request()->file('${1:file}')->store('uploads', 'public');",
 		],
 		"description": "NelsonDJCR 🐉"
 	},
