@@ -200,8 +200,8 @@
 	},
 
 	//*****    ROUTE   *****//
-	"route.get.function": {
-		"prefix": "rt-get.function 🌌",
+	"route:get:function": {
+		"prefix": "route:get:function 🌌",
 		"body": [
 			"Route::get('/${1:route}', function (){",
 			"	$2",
@@ -209,29 +209,43 @@
 		],
 		"description": "NelsonDJCR 🐉"
 	},
-	"route.get": {
-		"prefix": "rt-get 🌌",
+	"rt:get": {
+		"prefix": "rt:get 🌌",
 		"body": [
-			"Route::get('/${route}', [$Controller::class,'$function']);"
+			"Route::get('${1:route}','${1:function}$2')->name('$1$3');"
 		],
 		"description": "NelsonDJCR 🐉"
 	},
-	"route.post": {
-		"prefix": "rt-post 🌌",
+	"rt:post": {
+		"prefix": "rt:post 🌌",
 		"body": [
-			"Route::post('/${1:route}', [$Controller::class,'$function']);"
+			"Route::post('${1:route}','${1:function}$2')->name('$1$3');"
 		],
 		"description": "NelsonDJCR 🐉"
 	},
-	"web-apiResource": {
-		"prefix": "rt-apiResource 🌌",
+	"8rt:get": {
+		"prefix": "8rt:get 🌌",
+		"body": [
+			"Route::get('${1:route}', [$Controller::class,'$function']);"
+		],
+		"description": "NelsonDJCR 🐉"
+	},
+	"8rt:post": {
+		"prefix": "8rt:post 🌌",
+		"body": [
+			"Route::post('${1:route}', [$Controller::class,'$function']);"
+		],
+		"description": "NelsonDJCR 🐉"
+	},
+	"rt:apiResource": {
+		"prefix": "rt:apiResource 🌌",
 		"body": [
 			"Route::apiResource('/${1:route}', ${Controller}::class);"
 		],
 		"description": "NelsonDJCR 🐉"
 	},
-	"route.middleware": {
-		"prefix": "rt-middleware 🌌",
+	"rt:middleware": {
+		"prefix": "rt:middleware 🌌",
 		"body": [
 			"Route::group(['middleware' => ['role:$1']], function () {",
 			"	$2",
@@ -239,17 +253,37 @@
 		],
 		"description": "NelsonDJCR 🐉"
 	},
-	"web-resource": {
-		"prefix": "rt-resource 🌌",
+	"rt:controller": {
+		"prefix": "rt:controller 🌌",
 		"body": [
-			"Route::resource('/${1:route}', ${Controller}::class);"
+			"Route::controller(${1:Controller}::class)->group(function (){",
+			"	$2",
+			"});",
 		],
 		"description": "NelsonDJCR 🐉"
 	},
-	"php {}": {
-		"prefix": "{{ 🌌",
+	"rt:prefix": {
+		"prefix": "rt:prefix 🌌",
 		"body": [
-			"{{ $1 }}"
+			"Route::prefix('$1')->group(function () {",
+			"	$2",
+			"});",
+		],
+		"description": "NelsonDJCR 🐉"
+	},
+	"rt:name": {
+		"prefix": "rt:name 🌌",
+		"body": [
+			"Route::name('${1:admin.}')->group(function () {",
+			"	$2",
+			"});",
+		],
+		"description": "NelsonDJCR 🐉"
+	},
+	"rt:resource": {
+		"prefix": "rt:resource 🌌",
+		"body": [
+			"Route::resource('/${1:route}', ${Controller}::class);"
 		],
 		"description": "NelsonDJCR 🐉"
 	},
@@ -698,6 +732,13 @@
 		"prefix": "-comment() 🌌",
 		"body": [
 			"->comment('$1')$2"
+		],
+		"description": "NelsonDJCR 🐉"
+	},
+	"longText": {
+		"prefix": "-longText() 🌌",
+		"body": [
+			"->longText('$1')$2"
 		],
 		"description": "NelsonDJCR 🐉"
 	},
